@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ls Command Explanation</title>
+    <link rel="stylesheet" href="ls.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>ls</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>ls</code></h2>
+            <p>The <code>ls</code> command is used to list files and directories in Linux. The most basic form of the command is:</p>
+            <div class="code-block">
+                <code>ls</code>
+            </div>
+            <p>This will list files and directories in the current directory.</p>
+        </section>
+
+        <section>
+            <h2>Options Available with <code>ls</code></h2>
+
+            <h3><code>ls -l</code> (Long Listing Format)</h3>
+            <p>Shows detailed information about each file, such as permissions, ownership, and size:</p>
+            <div class="code-block">
+                <code>ls -l</code>
+            </div>
+
+            <h3><code>ls -a</code> (Show Hidden Files)</h3>
+            <p>Includes hidden files in the listing:</p>
+            <div class="code-block">
+                <code>ls -a</code>
+            </div>
+
+            <h3><code>ls -h</code> (Human-Readable Format)</h3>
+            <p>Displays file sizes in human-readable format (KB, MB):</p>
+            <div class="code-block">
+                <code>ls -lh</code>
+            </div>
+
+            <h3><code>ls -R</code> (Recursive Listing)</h3>
+            <p>Lists files recursively, showing the contents of subdirectories:</p>
+            <div class="code-block">
+                <code>ls -R</code>
+            </div>
+
+            <h3><code>ls -S</code> (Sort by Size)</h3>
+            <p>Sorts files by size, with the largest first:</p>
+            <div class="code-block">
+                <code>ls -S</code>
+            </div>
+
+            <h3><code>ls -t</code> (Sort by Modification Time)</h3>
+            <p>Sorts files by modification time, with the most recently modified first:</p>
+            <div class="code-block">
+                <code>ls -t</code>
+            </div>
+
+            <h3><code>ls -r</code> (Reverse Order)</h3>
+            <p>Reverses the order of the listing:</p>
+            <div class="code-block">
+                <code>ls -r</code>
+            </div>
+
+            <h3><code>ls -d</code> (List Directories Only)</h3>
+            <p>Lists only directories, not their contents:</p>
+            <div class="code-block">
+                <code>ls -d */</code>
+            </div>
+
+            <h3><code>ls --color</code> (Color-Coded Output)</h3>
+            <p>Displays the output with color coding based on file type:</p>
+            <div class="code-block">
+                <code>ls --color</code>
+            </div>
+
+            <h3><code>ls -i</code> (Show Inode Numbers)</h3>
+            <p>Displays the inode number for each file and directory:</p>
+            <div class="code-block">
+                <code>ls -i</code>
+            </div>
+
+            <h3><code>ls -F</code> (Classify File Types)</h3>
+            <p>Adds a character to each file type (e.g., `/` for directories, `*` for executables):</p>
+            <div class="code-block">
+                <code>ls -F</code>
+            </div>
+
+            <h3><code>ls --group-directories-first</code></h3>
+            <p>Lists directories first, followed by files:</p>
+            <div class="code-block">
+                <code>ls --group-directories-first</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Combination of Options</h2>
+            <p>Options can be combined to produce customized output. For example:</p>
+            <div class="code-block">
+                <code>ls -lah</code>
+            </div>
+            <p>This command lists all files (including hidden ones), with detailed information and human-readable sizes.</p>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>ls -l</code></td>
+                        <td>Long listing format (detailed info).</td>
+                    </tr>
+                    <tr>
+                        <td><code>ls -a</code></td>
+                        <td>Show hidden files.</td>
+                    </tr>
+                    <tr>
+                        <td><code>ls -h</code></td>
+                        <td>Human-readable sizes (KB, MB).</td>
+                    </tr>
+                    <tr>
+                        <td><code>ls -R</code></td>
+                        <td>Recursive listing.</td>
+                    </tr>
+                    <tr>
+                        <td><code>ls -S</code></td>
+                        <td>Sort by size.</td>
+                    </tr>
+                    <tr>
+                        <td><code>ls -t</code></td>
+                        <td>Sort by modification time.</td>
+                    </tr>
+                    <tr>
+                        <td><code>ls -r</code></td>
+                        <td>Reverse the order.</td>
+                    </tr>
+                    <tr>
+                        <td><code>ls -d</code></td>
+                        <td>List directories only.</td>
+                    </tr>
+                    <tr>
+                        <td><code>ls --color</code></td>
+                        <td>Color-coded output.</td>
+                    </tr>
+                    <tr>
+                        <td><code>ls -i</code></td>
+                        <td>Show inode numbers.</td>
+                    </tr>
+                    <tr>
+                        <td><code>ls -F</code></td>
+                        <td>Classify file types.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Manual Pages</h2>
+            <p>For more detailed information, use the manual page for the <code>ls</code> command:</p>
+            <div class="code-block">
+                <code>man ls</code>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

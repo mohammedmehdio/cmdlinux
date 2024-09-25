@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cd Command Explanation</title>
+    <link rel="stylesheet" href="cd.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>cd</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>cd</code></h2>
+            <p>The <code>cd</code> command is used to change directories in Linux. The most basic form of the command is:</p>
+            <div class="code-block">
+                <code>cd [directory]</code>
+            </div>
+            <p>This will change the current working directory to the one specified.</p>
+        </section>
+
+        <section>
+            <h2>Options Available with <code>cd</code></h2>
+
+            <h3><code>cd</code> (No Arguments)</h3>
+            <p>Returns you to your home directory:</p>
+            <div class="code-block">
+                <code>cd</code>
+            </div>
+
+            <h3><code>cd ..</code> (Parent Directory)</h3>
+            <p>Moves you one level up to the parent directory:</p>
+            <div class="code-block">
+                <code>cd ..</code>
+            </div>
+
+            <h3><code>cd /path/to/directory</code> (Absolute Path)</h3>
+            <p>Navigates to a directory using an absolute path:</p>
+            <div class="code-block">
+                <code>cd /home/user/Documents</code>
+            </div>
+
+            <h3><code>cd directory_name</code> (Relative Path)</h3>
+            <p>Navigates to a directory using a relative path:</p>
+            <div class="code-block">
+                <code>cd Documents</code>
+            </div>
+
+            <h3><code>cd -</code> (Previous Directory)</h3>
+            <p>Switches to the last directory you were in:</p>
+            <div class="code-block">
+                <code>cd -</code>
+            </div>
+
+            <h3><code>cd ~</code> (Home Directory)</h3>
+            <p>Navigates to your home directory:</p>
+            <div class="code-block">
+                <code>cd ~</code>
+            </div>
+
+            <h3><code>cd ../..</code> (Move Two Levels Up)</h3>
+            <p>Moves two levels up in the directory structure:</p>
+            <div class="code-block">
+                <code>cd ../..</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>cd</code></td>
+                        <td>Go to the home directory.</td>
+                    </tr>
+                    <tr>
+                        <td><code>cd ..</code></td>
+                        <td>Go up one directory level.</td>
+                    </tr>
+                    <tr>
+                        <td><code>cd /path/to/directory</code></td>
+                        <td>Go to a directory using an absolute path.</td>
+                    </tr>
+                    <tr>
+                        <td><code>cd directory_name</code></td>
+                        <td>Go to a directory using a relative path.</td>
+                    </tr>
+                    <tr>
+                        <td><code>cd -</code></td>
+                        <td>Go to the previous directory.</td>
+                    </tr>
+                    <tr>
+                        <td><code>cd ~</code></td>
+                        <td>Go to the home directory (equivalent to <code>cd</code>).</td>
+                    </tr>
+                    <tr>
+                        <td><code>cd ../..</code></td>
+                        <td>Move two levels up in the directory structure.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Manual Pages</h2>
+            <p>For more detailed information, use the manual page for the <code>cd</code> command:</p>
+            <div class="code-block">
+                <code>man cd</code>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

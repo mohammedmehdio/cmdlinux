@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pwd Command Explanation</title>
+    <link rel="stylesheet" href="pwd.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>pwd</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>pwd</code></h2>
+            <p>The <code>pwd</code> (print working directory) command in Linux is used to display the full path of the current directory you are working in. Here's how to use it:</p>
+            <div class="code-block">
+                <code>pwd</code>
+            </div>
+            <p>This will return the absolute path of your current directory. For example:</p>
+            <div class="code-block">
+                <code>/home/user/Documents</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Options Available with <code>pwd</code></h2>
+            <p>The <code>pwd</code> command has two main options that control how it displays the path:</p>
+            
+            <h3><code>pwd -L</code> (Logical Path)</h3>
+            <p>This option shows the logical path, meaning it displays the path with any symbolic links:</p>
+            <div class="code-block">
+                <code>/var/www</code>
+            </div>
+            <p>Even if <code>/var/www</code> is a symlink to <code>/home/user/public_html</code>, <code>pwd -L</code> will show the path you entered.</p>
+
+            <h3><code>pwd -P</code> (Physical Path)</h3>
+            <p>This option resolves and displays the actual physical path by ignoring symbolic links:</p>
+            <div class="code-block">
+                <code>/home/user/public_html</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Differences Between <code>-L</code> and <code>-P</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>pwd -L</code></td>
+                        <td>Shows the logical path (includes symbolic links).</td>
+                    </tr>
+                    <tr>
+                        <td><code>pwd -P</code></td>
+                        <td>Shows the actual physical path (ignores symbolic links).</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Common Use Cases</h2>
+            <ul>
+                <li><strong>Finding Your Current Directory:</strong> Simply run <code>pwd</code> to display the current directory.</li>
+                <li><strong>Confirming Directory Paths in Scripts:</strong> Use <code>pwd</code> in scripts to ensure you're in the correct directory.</li>
+                <li><strong>Handling Symlinks:</strong> Use <code>pwd -P</code> to verify the actual physical location of a directory.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Manual Pages</h2>
+            <p>For more detailed information, use the <code>man pwd</code> command:</p>
+            <div class="code-block">
+                <code>man pwd</code>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
