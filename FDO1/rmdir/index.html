@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rmdir Command Explanation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>rmdir</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>rmdir</code></h2>
+            <p>The <code>rmdir</code> command is used to remove empty directories in Linux. The most basic form of the command is:</p>
+            <div class="code-block">
+                <code>rmdir [directory_name]</code>
+            </div>
+            <p>This will remove the specified directory if it is empty.</p>
+        </section>
+
+        <section>
+            <h2>Options Available with <code>rmdir</code></h2>
+
+            <h3><code>rmdir</code> (Basic Usage)</h3>
+            <p>Removes an empty directory:</p>
+            <div class="code-block">
+                <code>rmdir empty_folder</code>
+            </div>
+
+            <h3><code>rmdir -p</code> (Remove Parent Directories)</h3>
+            <p>Removes the directory and its parent directories, but only if they are empty:</p>
+            <div class="code-block">
+                <code>rmdir -p /home/user/dir1/dir2</code>
+            </div>
+
+            <h3><code>rmdir --ignore-fail-on-non-empty</code> (Ignore Non-empty Errors)</h3>
+            <p>Ignores errors when trying to remove non-empty directories:</p>
+            <div class="code-block">
+                <code>rmdir --ignore-fail-on-non-empty non_empty_folder</code>
+            </div>
+
+            <h3><code>rmdir --help</code> (Show Help)</h3>
+            <p>Displays help information for the <code>rmdir</code> command:</p>
+            <div class="code-block">
+                <code>rmdir --help</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>rmdir [directory_name]</code></td>
+                        <td>Removes an empty directory.</td>
+                    </tr>
+                    <tr>
+                        <td><code>rmdir -p [path]</code></td>
+                        <td>Removes a directory and any parent directories if they are empty.</td>
+                    </tr>
+                    <tr>
+                        <td><code>rmdir --ignore-fail-on-non-empty</code></td>
+                        <td>Ignores errors for non-empty directories.</td>
+                    </tr>
+                    <tr>
+                        <td><code>rmdir --help</code></td>
+                        <td>Displays help information.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Manual Pages</h2>
+            <p>For more detailed information, use the manual page for the <code>rmdir</code> command:</p>
+            <div class="code-block">
+                <code>man rmdir</code>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

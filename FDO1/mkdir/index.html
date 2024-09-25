@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mkdir Command Explanation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>mkdir</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>mkdir</code></h2>
+            <p>The <code>mkdir</code> command is used to create new directories in Linux. The most basic form of the command is:</p>
+            <div class="code-block">
+                <code>mkdir [directory_name]</code>
+            </div>
+            <p>This will create a directory with the specified name in the current working directory.</p>
+        </section>
+
+        <section>
+            <h2>Options Available with <code>mkdir</code></h2>
+
+            <h3><code>mkdir</code> (Basic Usage)</h3>
+            <p>Creates a new directory in the current location:</p>
+            <div class="code-block">
+                <code>mkdir new_folder</code>
+            </div>
+
+            <h3><code>mkdir -p</code> (Create Parent Directories)</h3>
+            <p>Creates the directory and any necessary parent directories:</p>
+            <div class="code-block">
+                <code>mkdir -p /home/user/new_folder/sub_folder</code>
+            </div>
+
+            <h3><code>mkdir -v</code> (Verbose Mode)</h3>
+            <p>Prints a message for each directory that is created:</p>
+            <div class="code-block">
+                <code>mkdir -v new_folder</code>
+            </div>
+            <p>Output:</p>
+            <div class="code-block">
+                <code>mkdir: created directory 'new_folder'</code>
+            </div>
+
+            <h3><code>mkdir -m</code> (Set Permissions)</h3>
+            <p>Creates a directory with the specified permissions:</p>
+            <div class="code-block">
+                <code>mkdir -m 755 new_folder</code>
+            </div>
+
+            <h3><code>mkdir --help</code> (Show Help)</h3>
+            <p>Displays help information for the <code>mkdir</code> command:</p>
+            <div class="code-block">
+                <code>mkdir --help</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>mkdir [directory_name]</code></td>
+                        <td>Creates a new directory.</td>
+                    </tr>
+                    <tr>
+                        <td><code>mkdir -p [path]</code></td>
+                        <td>Creates a directory and any necessary parent directories.</td>
+                    </tr>
+                    <tr>
+                        <td><code>mkdir -v [directory_name]</code></td>
+                        <td>Prints a message for each directory created.</td>
+                    </tr>
+                    <tr>
+                        <td><code>mkdir -m [mode] [directory_name]</code></td>
+                        <td>Creates a directory with the specified permissions.</td>
+                    </tr>
+                    <tr>
+                        <td><code>mkdir --help</code></td>
+                        <td>Displays help information.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Manual Pages</h2>
+            <p>For more detailed information, use the manual page for the <code>mkdir</code> command:</p>
+            <div class="code-block">
+                <code>man mkdir</code>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
