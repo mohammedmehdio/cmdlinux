@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>top Command Explanation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>top</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>top</code></h2>
+            <p>The <code>top</code> command in Linux displays real-time information about running processes, including CPU and memory usage, PID, user, time running, and more. It is an interactive command, meaning you can perform actions while it's running (like sorting processes).</p>
+            <div class="code-block">
+                <code>top [OPTIONS]</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Options Available with <code>top</code></h2>
+
+            <h3><code>-b</code> (Batch Mode)</h3>
+            <p>Run in batch mode for logging or file output:</p>
+            <div class="code-block">
+                <code>top -b</code>
+            </div>
+            <p>This option outputs top results in batch mode, which is useful for saving to a file.</p>
+
+            <h3><code>-n</code> (Number of Iterations)</h3>
+            <p>Set the number of iterations <code>top</code> should output before exiting:</p>
+            <div class="code-block">
+                <code>top -n 5</code>
+            </div>
+            <p>This example makes <code>top</code> run for 5 refreshes before it stops.</p>
+
+            <h3><code>-d</code> (Delay Time Interval)</h3>
+            <p>Specify the delay between refreshes in seconds:</p>
+            <div class="code-block">
+                <code>top -d 3</code>
+            </div>
+            <p>This sets the delay to 3 seconds between refreshes.</p>
+
+            <h3><code>-u</code> (User-Specific Mode)</h3>
+            <p>Show processes owned by a specific user:</p>
+            <div class="code-block">
+                <code>top -u username</code>
+            </div>
+            <p>This displays processes for a particular user.</p>
+
+            <h3><code>-p</code> (Monitor Specific PIDs)</h3>
+            <p>Monitor specific processes by their PID:</p>
+            <div class="code-block">
+                <code>top -p 1234</code>
+            </div>
+            <p>Displays only the process with the given PID, useful for tracking particular processes.</p>
+
+            <h3><code>-c</code> (Show Command Line)</h3>
+            <p>Show full command line of processes instead of just the process name:</p>
+            <div class="code-block">
+                <code>top -c</code>
+            </div>
+            <p>Reveals the complete command line for each process.</p>
+
+            <h3><code>-H</code> (Show Threads)</h3>
+            <p>Show all threads in addition to processes:</p>
+            <div class="code-block">
+                <code>top -H</code>
+            </div>
+            <p>This displays threads along with processes, useful for debugging multithreaded applications.</p>
+
+            <h3><code>-i</code> (Ignore Idle Processes)</h3>
+            <p>Suppress idle or zombie processes:</p>
+            <div class="code-block">
+                <code>top -i</code>
+            </div>
+            <p>Focuses only on active processes by ignoring idle or zombie processes.</p>
+
+            <h3><code>-S</code> (Cumulative Time Mode)</h3>
+            <p>Display cumulative CPU time:</p>
+            <div class="code-block">
+                <code>top -S</code>
+            </div>
+            <p>This option shows the total CPU time used by a task, including child processes.</p>
+
+            <h3><code>-o</code> (Sort by Field)</h3>
+            <p>Sort processes by a specified field:</p>
+            <div class="code-block">
+                <code>top -o %CPU</code>
+            </div>
+            <p>This example sorts processes by CPU usage.</p>
+
+            <h3><code>-v</code> (Version)</h3>
+            <p>Display version information:</p>
+            <div class="code-block">
+                <code>top -v</code>
+            </div>
+            <p>Shows the version of the <code>top</code> command installed on the system.</p>
+
+            <h3><code>-h</code> (Help)</h3>
+            <p>Display help information:</p>
+            <div class="code-block">
+                <code>top -h</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Interactive Commands within <code>top</code></h2>
+
+            <h3><code>k</code> (Kill a Process)</h3>
+            <p>To kill a process, press <code>k</code> and enter the PID of the process to terminate.</p>
+
+            <h3><code>r</code> (Renice a Process)</h3>
+            <p>To change the priority (nice value) of a process, press <code>r</code> and enter the PID and new priority.</p>
+
+            <h3><code>h</code> (Help Menu)</h3>
+            <p>Press <code>h</code> while running <code>top</code> to display a help menu.</p>
+
+            <h3><code>q</code> (Quit)</h3>
+            <p>Press <code>q</code> to exit <code>top</code>.</p>
+
+            <h3><code>Shift + P</code> (Sort by CPU Usage)</h3>
+            <p>Sort processes by CPU usage in descending order by pressing <code>Shift + P</code>.</p>
+
+            <h3><code>Shift + M</code> (Sort by Memory Usage)</h3>
+            <p>Sort processes by memory usage in descending order by pressing <code>Shift + M</code>.</p>
+
+            <h3><code>Shift + T</code> (Sort by Running Time)</h3>
+            <p>Sort processes by how long they have been running by pressing <code>Shift + T</code>.</p>
+        </section>
+
+        <section>
+            <h2>Examples of <code>top</code> Command</h2>
+
+            <h3>View All Running Processes</h3>
+            <div class="code-block">
+                <code>top</code>
+            </div>
+            <p>This shows all running processes in real-time, including CPU, memory usage, and more.</p>
+
+            <h3>Run <code>top</code> for 5 Iterations</h3>
+            <div class="code-block">
+                <code>top -n 5</code>
+            </div>
+            <p>This runs the <code>top</code> command for 5 iterations before automatically exiting.</p>
+
+            <h3>Display Processes for a Specific User</h3>
+            <div class="code-block">
+                <code>top -u john</code>
+            </div>
+            <p>This displays processes owned by the user <code>john</code>.</p>
+
+            <h3>Monitor a Specific Process by PID</h3>
+            <div class="code-block">
+                <code>top -p 1234</code>
+            </div>
+            <p>This monitors only the process with PID 1234.</p>
+
+            <h3>Log <code>top</code> Output to a File</h3>
+            <div class="code-block">
+                <code>top -b -n 1 > top_output.txt</code>
+            </div>
+            <p>This logs the output of a single iteration of <code>top</code> to a file named <code>top_output.txt</code>.</p>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>-b</code></td>
+                        <td>Run in batch mode for logging or file output.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-n</code></td>
+                        <td>Set the number of iterations to run <code>top</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-d</code></td>
+                        <td>Set the delay between refreshes.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-u</code></td>
+                        <td>Show processes for a specific user.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-p</code></td>
+                        <td>Monitor specific PIDs.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-c</code></td>
+                        <td>Show full command line of processes.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-H</code></td>
+                        <td>Show threads along with processes.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-i</code></td>
+                        <td>Ignore idle or zombie processes.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-S</code></td>
+                        <td>Show cumulative CPU time.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-o</code></td>
+                        <td>Sort by a specific field (e.g., CPU, memory).</td>
+                    </tr>
+                    <tr>
+                        <td><code>-v</code></td>
+                        <td>Display version information.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-h</code></td>
+                        <td>Display help information.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

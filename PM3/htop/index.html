@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htop Command Explanation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>htop</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>htop</code></h2>
+            <p>The <code>htop</code> command is an interactive process viewer for Unix systems. It is similar to <code>top</code>, but provides a more user-friendly, colorful interface and additional features for managing processes.</p>
+            <div class="code-block">
+                <code>htop [OPTIONS]</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Options Available with <code>htop</code></h2>
+
+            <h3><code>-h</code> (Help)</h3>
+            <p>Display help information:</p>
+            <div class="code-block">
+                <code>htop -h</code>
+            </div>
+
+            <h3><code>-v</code> (Version)</h3>
+            <p>Display version information:</p>
+            <div class="code-block">
+                <code>htop -v</code>
+            </div>
+
+            <h3><code>-C</code> (Color Mode)</h3>
+            <p>Run in color mode:</p>
+            <div class="code-block">
+                <code>htop -C</code>
+            </div>
+            <p>This option forces color output.</p>
+
+            <h3><code>-d</code> (Delay Time)</h3>
+            <p>Set the delay between updates:</p>
+            <div class="code-block">
+                <code>htop -d 3</code>
+            </div>
+            <p>This sets the update interval to 3 seconds.</p>
+
+            <h3><code>-p</code> (PID)</h3>
+            <p>Display only the process with the specified PID:</p>
+            <div class="code-block">
+                <code>htop -p 1234</code>
+            </div>
+
+            <h3><code>-s</code> (Sort By)</h3>
+            <p>Specify the sort order:</p>
+            <div class="code-block">
+                <code>htop -s %CPU</code>
+            </div>
+            <p>This sorts processes by CPU usage.</p>
+        </section>
+
+        <section>
+            <h2>Interactive Commands within <code>htop</code></h2>
+
+            <h3><code>F1</code> (Help)</h3>
+            <p>Open the help menu.</p>
+
+            <h3><code>F2</code> (Setup)</h3>
+            <p>Access the setup menu to customize <code>htop</code>.</p>
+
+            <h3><code>F3</code> (Search)</h3>
+            <p>Search for a process.</p>
+
+            <h3><code>F4</code> (Filter)</h3>
+            <p>Filter the displayed processes based on user input.</p>
+
+            <h3><code>F5</code> (Tree View)</h3>
+            <p>Toggle the tree view of processes.</p>
+
+            <h3><code>F6</code> (Sort By)</h3>
+            <p>Change the sort column for the displayed processes.</p>
+
+            <h3><code>F9</code> (Kill Process)</h3>
+            <p>Send a signal to a selected process to terminate it.</p>
+
+            <h3><code>F10</code> (Quit)</h3>
+            <p>Exit <code>htop</code>.</p>
+        </section>
+
+        <section>
+            <h2>Examples of <code>htop</code> Command</h2>
+
+            <h3>View All Running Processes</h3>
+            <div class="code-block">
+                <code>htop</code>
+            </div>
+            <p>This launches <code>htop</code> and displays all running processes in real-time.</p>
+
+            <h3>Run <code>htop</code> with a Specific PID</h3>
+            <div class="code-block">
+                <code>htop -p 1234</code>
+            </div>
+            <p>This displays only the process with PID 1234.</p>
+
+            <h3>Run <code>htop</code> with a Custom Delay</h3>
+            <div class="code-block">
+                <code>htop -d 2</code>
+            </div>
+            <p>This sets the update interval to 2 seconds.</p>
+
+            <h3>Display <code>htop</code> in Color Mode</h3>
+            <div class="code-block">
+                <code>htop -C</code>
+            </div>
+            <p>This forces color output in <code>htop</code>.</p>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>-h</code></td>
+                        <td>Display help information.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-v</code></td>
+                        <td>Display version information.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-C</code></td>
+                        <td>Run in color mode.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-d</code></td>
+                        <td>Set the delay between updates.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-p</code></td>
+                        <td>Display only the specified PID.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-s</code></td>
+                        <td>Specify the sort order.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

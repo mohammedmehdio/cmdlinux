@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ps Command Explanation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>ps</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>ps</code></h2>
+            <p>The <code>ps</code> command in Linux is used to display information about active processes. It stands for "process status" and gives a snapshot of the current processes running in the system at the time it is invoked.</p>
+            <div class="code-block">
+                <code>ps [OPTIONS]</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Options Available with <code>ps</code></h2>
+
+            <h3><code>-e</code> (All Processes)</h3>
+            <p>Show all processes running on the system:</p>
+            <div class="code-block">
+                <code>ps -e</code>
+            </div>
+            <p>This option displays every process running on the system, including system and user processes.</p>
+
+            <h3><code>-f</code> (Full Format Listing)</h3>
+            <p>Show a full listing of processes with more detailed information:</p>
+            <div class="code-block">
+                <code>ps -f</code>
+            </div>
+            <p>This option shows more detailed information, such as the parent process ID (PPID), user, and command.</p>
+
+            <h3><code>-u</code> (User Format)</h3>
+            <p>Display processes for a specific user:</p>
+            <div class="code-block">
+                <code>ps -u username</code>
+            </div>
+            <p>This shows processes owned by a specific user.</p>
+
+            <h3><code>-aux</code> (Detailed Information)</h3>
+            <p>Displays detailed information about all processes, including user, PID, CPU usage, and memory usage:</p>
+            <div class="code-block">
+                <code>ps aux</code>
+            </div>
+            <p>This is commonly used to display all running processes in a detailed manner.</p>
+
+            <h3><code>-l</code> (Long Format Listing)</h3>
+            <p>Show processes in long format:</p>
+            <div class="code-block">
+                <code>ps -l</code>
+            </div>
+            <p>This option provides detailed information, including flags, state, and priority of processes.</p>
+
+            <h3><code>-p</code> (Specify Process ID)</h3>
+            <p>Display information about a specific process by its PID:</p>
+            <div class="code-block">
+                <code>ps -p PID</code>
+            </div>
+            <p>Here, <code>PID</code> refers to the process ID. This option allows you to view detailed information about a particular process.</p>
+
+            <h3><code>-T</code> (Show Threads)</h3>
+            <p>Display information about threads:</p>
+            <div class="code-block">
+                <code>ps -T</code>
+            </div>
+            <p>This option lists all threads for a specific terminal.</p>
+
+            <h3><code>--forest</code> (Display Hierarchical View)</h3>
+            <p>Display processes in a hierarchical tree format:</p>
+            <div class="code-block">
+                <code>ps --forest</code>
+            </div>
+            <p>This shows the parent-child relationships between processes.</p>
+
+            <h3><code>-C</code> (By Command Name)</h3>
+            <p>Select processes by command name:</p>
+            <div class="code-block">
+                <code>ps -C commandname</code>
+            </div>
+            <p>This option allows you to select and display processes based on the command name.</p>
+
+            <h3><code>--sort</code> (Sort Output)</h3>
+            <p>Sort processes by a specific column, such as CPU or memory usage:</p>
+            <div class="code-block">
+                <code>ps --sort=-pcpu</code>
+            </div>
+            <p>This sorts the output by the percentage of CPU usage in descending order.</p>
+
+            <h3><code>-o</code> (Custom Output Format)</h3>
+            <p>Customize the output format by selecting specific columns:</p>
+            <div class="code-block">
+                <code>ps -eo pid,cmd,pcpu,pmem</code>
+            </div>
+            <p>This displays the PID, command, CPU usage, and memory usage of all processes.</p>
+
+            <h3><code>--help</code></h3>
+            <p>Display help information about the <code>ps</code> command:</p>
+            <div class="code-block">
+                <code>ps --help</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Examples of <code>ps</code> Command</h2>
+
+            <h3>List All Processes</h3>
+            <div class="code-block">
+                <code>ps -e</code>
+            </div>
+            <p>This command lists all processes currently running on the system.</p>
+
+            <h3>View Processes for a Specific User</h3>
+            <div class="code-block">
+                <code>ps -u root</code>
+            </div>
+            <p>This displays processes owned by the user <code>root</code>.</p>
+
+            <h3>Detailed Process Information</h3>
+            <div class="code-block">
+                <code>ps aux</code>
+            </div>
+            <p>This command provides detailed information about all running processes, including CPU and memory usage.</p>
+
+            <h3>Displaying a Specific Process by PID</h3>
+            <div class="code-block">
+                <code>ps -p 1234</code>
+            </div>
+            <p>This shows information about the process with PID 1234.</p>
+
+            <h3>Hierarchical Process View</h3>
+            <div class="code-block">
+                <code>ps --forest</code>
+            </div>
+            <p>This command shows processes in a tree structure to visualize parent-child relationships.</p>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>-e</code></td>
+                        <td>Display all processes.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-f</code></td>
+                        <td>Show full format listing.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-u</code></td>
+                        <td>Display processes for a specific user.</td>
+                    </tr>
+                    <tr>
+                        <td><code>aux</code></td>
+                        <td>Display detailed information about all processes.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-l</code></td>
+                        <td>Show processes in long format.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-p</code></td>
+                        <td>Show information for a specific process ID.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-T</code></td>
+                        <td>Show threads for a specific terminal.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--forest</code></td>
+                        <td>Display processes in a hierarchical tree format.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-C</code></td>
+                        <td>Select processes by command name.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--sort</code></td>
+                        <td>Sort processes by a specific column.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-o</code></td>
+                        <td>Customize the output format.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Manual Pages</h2>
+            <p>For more detailed information, you can refer to the manual page for the <code>ps</code> command:</p>
+            <div class="code-block">
+                <code>man ps</code>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
