@@ -12,8 +12,6 @@
 
 - <b>UGM6</b> : User and Group Management.
 
-- <b>HOME</b> : Home Page.
-
 # <h1 align="center" >Description</h1> 
 
 <h2 align="center">This website let you learn and find the Linux commande that you want in a blink of an eye.</h2>
