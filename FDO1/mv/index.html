@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mv Command Explanation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>mv</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>mv</code></h2>
+            <p>The <code>mv</code> command is used to move or rename files and directories in Linux. It can either move a file to a different location or rename the file in the same directory:</p>
+            <div class="code-block">
+                <code>mv [source] [destination]</code>
+            </div>
+            <p>If the destination is a directory, it will move the source file there. If the destination is a file, the source file will be renamed to the destination.</p>
+        </section>
+
+        <section>
+            <h2>Options Available with <code>mv</code></h2>
+
+            <h3><code>mv -i</code> (Interactive Mode)</h3>
+            <p>Prompts before overwriting an existing file:</p>
+            <div class="code-block">
+                <code>mv -i file1.txt /home/user/directory/</code>
+            </div>
+            <p>This will ask for confirmation before overwriting <code>file1.txt</code> if it already exists in the destination.</p>
+
+            <h3><code>mv -f</code> (Force Overwrite)</h3>
+            <p>Forces overwriting of the destination file without asking for confirmation:</p>
+            <div class="code-block">
+                <code>mv -f file1.txt /home/user/directory/</code>
+            </div>
+
+            <h3><code>mv -n</code> (No Overwrite)</h3>
+            <p>Does not overwrite an existing file in the destination:</p>
+            <div class="code-block">
+                <code>mv -n file1.txt /home/user/directory/</code>
+            </div>
+            <p>If <code>file1.txt</code> already exists in the destination directory, it will not be overwritten.</p>
+
+            <h3><code>mv -v</code> (Verbose Output)</h3>
+            <p>Displays detailed information about the moving or renaming process:</p>
+            <div class="code-block">
+                <code>mv -v file1.txt /home/user/directory/</code>
+            </div>
+            <p>This shows exactly what is happening during the <code>mv</code> process, which is useful for tracking large batch operations.</p>
+
+            <h3><code>mv --help</code></h3>
+            <p>Displays help information for the <code>mv</code> command:</p>
+            <div class="code-block">
+                <code>mv --help</code>
+            </div>
+
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>mv [source] [destination]</code></td>
+                        <td>Move or rename a file or directory.</td>
+                    </tr>
+                    <tr>
+                        <td><code>mv -i [file]</code></td>
+                        <td>Interactive mode, asks before overwriting files.</td>
+                    </tr>
+                    <tr>
+                        <td><code>mv -f [file]</code></td>
+                        <td>Force overwriting of files without confirmation.</td>
+                    </tr>
+                    <tr>
+                        <td><code>mv -n [file]</code></td>
+                        <td>No overwriting of existing files.</td>
+                    </tr>
+                    <tr>
+                        <td><code>mv -v [file]</code></td>
+                        <td>Verbose mode, displays detailed information during the move process.</td>
+                    </tr>
+                    <tr>
+                        <td><code>mv --help</code></td>
+                        <td>Display help information for the <code>mv</code> command.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Manual Pages</h2>
+            <p>For more detailed information, use the manual page for the <code>mv</code> command:</p>
+            <div class="code-block">
+                <code>man mv</code>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

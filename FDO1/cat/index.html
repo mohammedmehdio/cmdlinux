@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cat Command Explanation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>cat</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>cat</code></h2>
+            <p>The <code>cat</code> command (short for "concatenate") is used to read, combine, and display the contents of files. It can be used to display the contents of one or more files on the standard output (usually the terminal).</p>
+            <div class="code-block">
+                <code>cat [file_name]</code>
+            </div>
+            <p>This will display the contents of <code>file_name</code> to the terminal.</p>
+        </section>
+
+        <section>
+            <h2>Options Available with <code>cat</code></h2>
+
+            <h3><code>cat -n</code> (Number All Lines)</h3>
+            <p>Displays all lines of the file(s) with line numbers:</p>
+            <div class="code-block">
+                <code>cat -n file.txt</code>
+            </div>
+            <p>This will display each line of <code>file.txt</code> prefixed with its line number.</p>
+
+            <h3><code>cat -b</code> (Number Non-Empty Lines)</h3>
+            <p>Similar to the <code>-n</code> option, but it only numbers non-empty lines:</p>
+            <div class="code-block">
+                <code>cat -b file.txt</code>
+            </div>
+            <p>This will display <code>file.txt</code> with non-empty lines numbered, while empty lines remain unnumbered.</p>
+
+            <h3><code>cat -s</code> (Suppress Repeated Empty Lines)</h3>
+            <p>Suppresses repeated empty lines in the output:</p>
+            <div class="code-block">
+                <code>cat -s file.txt</code>
+            </div>
+            <p>This will remove any consecutive empty lines in <code>file.txt</code>.</p>
+
+            <h3><code>cat -v</code> (Show Non-Printable Characters)</h3>
+            <p>Displays non-printing characters (except for tabs and line endings) as visible characters:</p>
+            <div class="code-block">
+                <code>cat -v file.txt</code>
+            </div>
+            <p>Non-printing characters in <code>file.txt</code> will be shown in a human-readable form.</p>
+
+            <h3><code>cat -T</code> (Show Tabs as ^I)</h3>
+            <p>Displays tab characters as <code>^I</code>:</p>
+            <div class="code-block">
+                <code>cat -T file.txt</code>
+            </div>
+            <p>All tab characters in <code>file.txt</code> will be displayed as <code>^I</code>.</p>
+
+            <h3><code>cat -E</code> (Show End of Line)</h3>
+            <p>Displays a dollar sign (<code>$</code>) at the end of each line:</p>
+            <div class="code-block">
+                <code>cat -E file.txt</code>
+            </div>
+            <p>This adds a <code>$</code> symbol to indicate where each line in <code>file.txt</code> ends.</p>
+
+            <h3><code>cat file1 file2 &gt; output_file</code> (Concatenate Files)</h3>
+            <p>Concatenates multiple files and outputs the result to another file:</p>
+            <div class="code-block">
+                <code>cat file1.txt file2.txt &gt; combined.txt</code>
+            </div>
+            <p>This command will merge the contents of <code>file1.txt</code> and <code>file2.txt</code> into <code>combined.txt</code>.</p>
+
+            <h3><code>cat --help</code></h3>
+            <p>Displays help information for the <code>cat</code> command:</p>
+            <div class="code-block">
+                <code>cat --help</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>cat [file]</code></td>
+                        <td>Display the contents of a file.</td>
+                    </tr>
+                    <tr>
+                        <td><code>cat -n [file]</code></td>
+                        <td>Number all lines in the output.</td>
+                    </tr>
+                    <tr>
+                        <td><code>cat -b [file]</code></td>
+                        <td>Number only non-empty lines.</td>
+                    </tr>
+                    <tr>
+                        <td><code>cat -s [file]</code></td>
+                        <td>Suppress repeated empty lines.</td>
+                    </tr>
+                    <tr>
+                        <td><code>cat -v [file]</code></td>
+                        <td>Show non-printing characters (except tabs and line endings).</td>
+                    </tr>
+                    <tr>
+                        <td><code>cat -T [file]</code></td>
+                        <td>Show tab characters as <code>^I</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><code>cat -E [file]</code></td>
+                        <td>Show a dollar sign <code>$</code> at the end of each line.</td>
+                    </tr>
+                    <tr>
+                        <td><code>cat file1 file2 &gt; output_file</code></td>
+                        <td>Concatenate multiple files and redirect the output to another file.</td>
+                    </tr>
+                    <tr>
+                        <td><code>cat --help</code></td>
+                        <td>Display help information for the <code>cat</code> command.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Manual Pages</h2>
+            <p>For more detailed information, use the manual page for the <code>cat</code> command:</p>
+            <div class="code-block">
+                <code>man cat</code>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rm Command Explanation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>rm</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>rm</code></h2>
+            <p>The <code>rm</code> command is used to remove files and directories in Linux. The most basic form of the command is:</p>
+            <div class="code-block">
+                <code>rm [file_name]</code>
+            </div>
+            <p>This will remove the specified file or directory.</p>
+        </section>
+
+        <section>
+            <h2>Options Available with <code>rm</code></h2>
+
+            <h3><code>rm</code> (Basic Usage)</h3>
+            <p>Removes a file. If it is a directory, you need additional flags:</p>
+            <div class="code-block">
+                <code>rm file_name</code>
+            </div>
+
+            <h3><code>rm -r</code> (Recursive Remove)</h3>
+            <p>Removes a directory and its contents recursively:</p>
+            <div class="code-block">
+                <code>rm -r directory_name</code>
+            </div>
+            <p>This will remove the directory and all its files and subdirectories.</p>
+
+            <h3><code>rm -f</code> (Force Remove)</h3>
+            <p>Forces the removal of files without prompting for confirmation, even if the file is write-protected:</p>
+            <div class="code-block">
+                <code>rm -f file_name</code>
+            </div>
+
+            <h3><code>rm -i</code> (Interactive Mode)</h3>
+            <p>Prompts for confirmation before each file removal:</p>
+            <div class="code-block">
+                <code>rm -i file_name</code>
+            </div>
+
+            <h3><code>rm -d</code> (Remove Empty Directories)</h3>
+            <p>Removes an empty directory:</p>
+            <div class="code-block">
+                <code>rm -d directory_name</code>
+            </div>
+
+            <h3><code>rm -v</code> (Verbose Output)</h3>
+            <p>Displays information about what is being done as files are being removed:</p>
+            <div class="code-block">
+                <code>rm -v file_name</code>
+            </div>
+
+            <h3><code>rm --help</code> (Show Help)</h3>
+            <p>Displays help information for the <code>rm</code> command:</p>
+            <div class="code-block">
+                <code>rm --help</code>
+            </div>
+
+            <h3><code>rm -rf</code> (Force Recursive Remove)</h3>
+            <p>Combines <code>-r</code> and <code>-f</code> options to forcefully and recursively remove directories and files without prompting:</p>
+            <div class="code-block">
+                <code>rm -rf directory_name</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>rm [file_name]</code></td>
+                        <td>Removes a file.</td>
+                    </tr>
+                    <tr>
+                        <td><code>rm -r [directory_name]</code></td>
+                        <td>Removes a directory and its contents recursively.</td>
+                    </tr>
+                    <tr>
+                        <td><code>rm -f [file_name]</code></td>
+                        <td>Forces the removal of a file without confirmation.</td>
+                    </tr>
+                    <tr>
+                        <td><code>rm -i [file_name]</code></td>
+                        <td>Prompts for confirmation before each file removal.</td>
+                    </tr>
+                    <tr>
+                        <td><code>rm -d [directory_name]</code></td>
+                        <td>Removes an empty directory.</td>
+                    </tr>
+                    <tr>
+                        <td><code>rm -v [file_name]</code></td>
+                        <td>Provides verbose output while removing files.</td>
+                    </tr>
+                    <tr>
+                        <td><code>rm -rf [directory_name]</code></td>
+                        <td>Forcefully and recursively removes a directory and its contents.</td>
+                    </tr>
+                    <tr>
+                        <td><code>rm --help</code></td>
+                        <td>Displays help information.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Manual Pages</h2>
+            <p>For more detailed information, use the manual page for the <code>rm</code> command:</p>
+            <div class="code-block">
+                <code>man rm</code>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

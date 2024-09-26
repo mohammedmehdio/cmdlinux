@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cp Command Explanation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>cp</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>cp</code></h2>
+            <p>The <code>cp</code> command is used to copy files and directories in Linux. The most basic usage is:</p>
+            <div class="code-block">
+                <code>cp [source_file] [destination]</code>
+            </div>
+            <p>This will copy the specified file from the source to the destination.</p>
+        </section>
+
+        <section>
+            <h2>Options Available with <code>cp</code></h2>
+
+            <h3><code>cp</code> (Basic Copy)</h3>
+            <p>Copies a file or directory from one location to another:</p>
+            <div class="code-block">
+                <code>cp file1.txt /home/user/directory/</code>
+            </div>
+
+            <h3><code>cp -r</code> (Recursive Copy)</h3>
+            <p>Copies directories recursively (i.e., it copies the directory along with all its files and subdirectories):</p>
+            <div class="code-block">
+                <code>cp -r directory1/ /home/user/directory2/</code>
+            </div>
+
+            <h3><code>cp -f</code> (Force Overwrite)</h3>
+            <p>Forces the overwrite of existing files without confirmation:</p>
+            <div class="code-block">
+                <code>cp -f file1.txt /home/user/directory/</code>
+            </div>
+
+            <h3><code>cp -i</code> (Interactive Mode)</h3>
+            <p>Prompts the user for confirmation before overwriting files:</p>
+            <div class="code-block">
+                <code>cp -i file1.txt /home/user/directory/</code>
+            </div>
+
+            <h3><code>cp -u</code> (Update Only)</h3>
+            <p>Copies only when the source file is newer than the destination file or if the destination file does not exist:</p>
+            <div class="code-block">
+                <code>cp -u file1.txt /home/user/directory/</code>
+            </div>
+
+            <h3><code>cp -v</code> (Verbose Output)</h3>
+            <p>Displays detailed information about the copying process:</p>
+            <div class="code-block">
+                <code>cp -v file1.txt /home/user/directory/</code>
+            </div>
+
+            <h3><code>cp -p</code> (Preserve File Attributes)</h3>
+            <p>Preserves file attributes such as modification time, access time, and file permissions:</p>
+            <div class="code-block">
+                <code>cp -p file1.txt /home/user/directory/</code>
+            </div>
+
+            <h3><code>cp -a</code> (Archive Mode)</h3>
+            <p>Preserves the original file structure, attributes, and symbolic links while copying directories recursively:</p>
+            <div class="code-block">
+                <code>cp -a directory1/ /home/user/directory2/</code>
+            </div>
+
+            <h3><code>cp --parents</code></h3>
+            <p>Copies the file along with its parent directory structure:</p>
+            <div class="code-block">
+                <code>cp --parents dir1/dir2/file.txt /destination/</code>
+            </div>
+
+            <h3><code>cp -n</code> (No Overwrite)</h3>
+            <p>Prevents overwriting existing files at the destination:</p>
+            <div class="code-block">
+                <code>cp -n file1.txt /home/user/directory/</code>
+            </div>
+
+            <h3><code>cp --help</code></h3>
+            <p>Displays the help manual for the <code>cp</code> command:</p>
+            <div class="code-block">
+                <code>cp --help</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>cp [source_file] [destination]</code></td>
+                        <td>Basic file copy.</td>
+                    </tr>
+                    <tr>
+                        <td><code>cp -r [directory]</code></td>
+                        <td>Recursively copies directories and their contents.</td>
+                    </tr>
+                    <tr>
+                        <td><code>cp -f [file]</code></td>
+                        <td>Forces overwriting of existing files.</td>
+                    </tr>
+                    <tr>
+                        <td><code>cp -i [file]</code></td>
+                        <td>Prompts for confirmation before overwriting files.</td>
+                    </tr>
+                    <tr>
+                        <td><code>cp -u [file]</code></td>
+                        <td>Copies only if the source file is newer or the destination file doesn't exist.</td>
+                    </tr>
+                    <tr>
+                        <td><code>cp -v [file]</code></td>
+                        <td>Verbose mode, showing details during the copy process.</td>
+                    </tr>
+                    <tr>
+                        <td><code>cp -p [file]</code></td>
+                        <td>Preserves file attributes like timestamps and permissions.</td>
+                    </tr>
+                    <tr>
+                        <td><code>cp -a [directory]</code></td>
+                        <td>Preserves the file attributes, symbolic links, and structure while copying.</td>
+                    </tr>
+                    <tr>
+                        <td><code>cp --parents [file]</code></td>
+                        <td>Copies the file along with its parent directory structure.</td>
+                    </tr>
+                    <tr>
+                        <td><code>cp -n [file]</code></td>
+                        <td>Prevents overwriting existing files.</td>
+                    </tr>
+                    <tr>
+                        <td><code>cp --help</code></td>
+                        <td>Displays help information.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Manual Pages</h2>
+            <p>For more detailed information, use the manual page for the <code>cp</code> command:</p>
+            <div class="code-block">
+                <code>man cp</code>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
