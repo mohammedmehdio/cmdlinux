@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ping Command Explanation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>ping</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>ping</code></h2>
+            <p>The <code>ping</code> command is used to check the reachability of a host on an Internet Protocol (IP) network. It sends Internet Control Message Protocol (ICMP) Echo Request messages to the destination and listens for Echo Response replies.</p>
+            <div class="code-block">
+                <code>ping [OPTION]... <i>destination</i></code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Options Available with <code>ping</code></h2>
+
+            <h3><code>-c <i>count</i></code></h3>
+            <p>Send a specific number of ping requests:</p>
+            <div class="code-block">
+                <code>ping -c 4 example.com</code>
+            </div>
+
+            <h3><code>-i <i>interval</i></code></h3>
+            <p>Set the interval between sending each packet (in seconds):</p>
+            <div class="code-block">
+                <code>ping -i 2 example.com</code>
+            </div>
+
+            <h3><code>-t <i>ttl</i></code></h3>
+            <p>Set the Time To Live for the packets:</p>
+            <div class="code-block">
+                <code>ping -t 64 example.com</code>
+            </div>
+
+            <h3><code>-s <i>size</i></code></h3>
+            <p>Specify the number of data bytes to be sent:</p>
+            <div class="code-block">
+                <code>ping -s 56 example.com</code>
+            </div>
+
+            <h3><code>-W <i>timeout</i></code></h3>
+            <p>Set the time to wait for a reply (in seconds):</p>
+            <div class="code-block">
+                <code>ping -W 2 example.com</code>
+            </div>
+
+            <h3><code>-q</code></h3>
+            <p>Run in quiet mode (suppress output except for summary):</p>
+            <div class="code-block">
+                <code>ping -q example.com</code>
+            </div>
+
+            <h3><code>-h</code></h3>
+            <p>Display help information for the command:</p>
+            <div class="code-block">
+                <code>ping -h</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Examples of <code>ping</code> Command</h2>
+
+            <h3>Ping a Host</h3>
+            <div class="code-block">
+                <code>ping example.com</code>
+            </div>
+            <p>This command sends an infinite number of ping requests to the specified host.</p>
+
+            <h3>Ping a Host with a Specific Count</h3>
+            <div class="code-block">
+                <code>ping -c 5 example.com</code>
+            </div>
+            <p>This command sends exactly 5 ping requests to the specified host.</p>
+
+            <h3>Ping a Host with a Custom Packet Size</h3>
+            <div class="code-block">
+                <code>ping -s 128 example.com</code>
+            </div>
+            <p>This command sends ping requests with 128 bytes of data.</p>
+        </section>
+
+        <section>
+            <h2>Understanding Ping Output</h2>
+            <p>The output of the <code>ping</code> command typically includes the following information:</p>
+            <ul>
+                <li><strong>Reply from:</strong> The IP address of the responding host.</li>
+                <li><strong>Bytes:</strong> The number of bytes received from the host.</li>
+                <li><strong>Time:</strong> The round-trip time for the packet.</li>
+                <li><strong>TTL:</strong> Time To Live value indicating the number of hops the packet can take.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>-c <i>count</i></code></td>
+                        <td>Send a specific number of ping requests.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-i <i>interval</i></code></td>
+                        <td>Set the interval between sending each packet.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-t <i>ttl</i></code></td>
+                        <td>Set the Time To Live for the packets.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-s <i>size</i></code></td>
+                        <td>Specify the number of data bytes to be sent.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-W <i>timeout</i></code></td>
+                        <td>Set the time to wait for a reply.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-q</code></td>
+                        <td>Run in quiet mode (suppress output except for summary).</td>
+                    </tr>
+                    <tr>
+                        <td><code>-h</code></td>
+                        <td>Display help information for the command.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

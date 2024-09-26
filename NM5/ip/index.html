@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ip Command Explanation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>ip</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>ip</code></h2>
+            <p>The <code>ip</code> command is a versatile tool used to manage networking in Linux. It is part of the <code>iproute2</code> package and replaces older commands like <code>ifconfig</code>. This command can configure network interfaces, manage routing, and more.</p>
+            <div class="code-block">
+                <code>ip [OPTIONS] OBJECT {COMMAND | help}</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Options Available with <code>ip</code></h2>
+
+            <h3>OBJECTS</h3>
+            <p>The <code>ip</code> command has several objects, including:</p>
+            <ul>
+                <li><strong>link</strong> - Manage network interfaces.</li>
+                <li><strong>addr</strong> - Manage IP addresses.</li>
+                <li><strong>route</strong> - Manage routing tables.</li>
+                <li><strong>neigh</strong> - Manage ARP entries.</li>
+                <li><strong>rule</strong> - Manage routing policy rules.</li>
+                <li><strong>tunnel</strong> - Manage IP tunnels.</li>
+            </ul>
+
+            <h3><code>ip link</code></h3>
+            <p>Manage network interfaces:</p>
+            <div class="code-block">
+                <code>ip link [COMMAND]</code>
+            </div>
+
+            <h3><code>ip addr</code></h3>
+            <p>Manage IP addresses:</p>
+            <div class="code-block">
+                <code>ip addr [COMMAND]</code>
+            </div>
+
+            <h3><code>ip route</code></h3>
+            <p>Manage routing tables:</p>
+            <div class="code-block">
+                <code>ip route [COMMAND]</code>
+            </div>
+
+            <h3>Common Commands</h3>
+            <h4><code>show</code></h4>
+            <p>Display information:</p>
+            <div class="code-block">
+                <code>ip link show</code>
+            </div>
+
+            <h4><code>add</code></h4>
+            <p>Add a new interface or address:</p>
+            <div class="code-block">
+                <code>ip addr add 192.168.1.100/24 dev eth0</code>
+            </div>
+
+            <h4><code>del</code></h4>
+            <p>Delete an interface or address:</p>
+            <div class="code-block">
+                <code>ip addr del 192.168.1.100/24 dev eth0</code>
+            </div>
+
+            <h4><code>set</code></h4>
+            <p>Set parameters for an interface:</p>
+            <div class="code-block">
+                <code>ip link set dev eth0 up</code>
+            </div>
+
+            <h4><code>link set</code></h4>
+            <p>Change the state of a network interface:</p>
+            <div class="code-block">
+                <code>ip link set eth0 down</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Examples of <code>ip</code> Command</h2>
+
+            <h3>Display All Network Interfaces</h3>
+            <div class="code-block">
+                <code>ip link show</code>
+            </div>
+            <p>This command displays all network interfaces and their status.</p>
+
+            <h3>Add an IP Address to an Interface</h3>
+            <div class="code-block">
+                <code>ip addr add 192.168.1.100/24 dev eth0</code>
+            </div>
+            <p>This command assigns the IP address <code>192.168.1.100</code> to the <code>eth0</code> interface.</p>
+
+            <h3>Delete an IP Address from an Interface</h3>
+            <div class="code-block">
+                <code>ip addr del 192.168.1.100/24 dev eth0</code>
+            </div>
+            <p>This command removes the IP address <code>192.168.1.100</code> from the <code>eth0</code> interface.</p>
+
+            <h3>Show Routing Table</h3>
+            <div class="code-block">
+                <code>ip route show</code>
+            </div>
+            <p>This command displays the current routing table.</p>
+        </section>
+
+        <section>
+            <h2>Understanding ip Output</h2>
+            <p>The output of the <code>ip</code> command can vary based on the object and command used. For example:</p>
+            <ul>
+                <li><strong>link:</strong> Displays the interface name, state (up/down), and other settings.</li>
+                <li><strong>addr:</strong> Shows the IP address assigned to the interface, along with the associated network mask.</li>
+                <li><strong>route:</strong> Lists the destination network, gateway, and associated interfaces for routing.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>link</code></td>
+                        <td>Manage network interfaces.</td>
+                    </tr>
+                    <tr>
+                        <td><code>addr</code></td>
+                        <td>Manage IP addresses.</td>
+                    </tr>
+                    <tr>
+                        <td><code>route</code></td>
+                        <td>Manage routing tables.</td>
+                    </tr>
+                    <tr>
+                        <td><code>neigh</code></td>
+                        <td>Manage ARP entries.</td>
+                    </tr>
+                    <tr>
+                        <td><code>rule</code></td>
+                        <td>Manage routing policy rules.</td>
+                    </tr>
+                    <tr>
+                        <td><code>tunnel</code></td>
+                        <td>Manage IP tunnels.</td>
+                    </tr>
+                    <tr>
+                        <td><code>show</code></td>
+                        <td>Display information about the specified object.</td>
+                    </tr>
+                    <tr>
+                        <td><code>add</code></td>
+                        <td>Add a new interface or address.</td>
+                    </tr>
+                    <tr>
+                        <td><code>del</code></td>
+                        <td>Delete an interface or address.</td>
+                    </tr>
+                    <tr>
+                        <td><code>set</code></td>
+                        <td>Set parameters for an interface.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

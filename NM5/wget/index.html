@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wget Command Explanation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>wget</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>wget</code></h2>
+            <p>The <code>wget</code> command is a widely used utility for non-interactive downloading of files from the web. It supports HTTP, HTTPS, and FTP protocols and can handle recursive downloads, making it very powerful for retrieving content from websites.</p>
+            <div class="code-block">
+                <code>wget [OPTIONS] [URL]</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Common Options for <code>wget</code></h2>
+            <p><code>wget</code> has a variety of options to customize its behavior:</p>
+            <ul>
+                <li><code>-V, --version</code> - Display version information and exit.</li>
+                <li><code>-h, --help</code> - Display a help message and exit.</li>
+                <li><code>-b, --background</code> - Go to background after startup.</li>
+                <li><code>-N, --timestamping</code> - Don't re-download files unless newer.</li>
+                <li><code>-P <directory></code> - Set the directory prefix to <code>directory</code>.</li>
+                <li><code>-r, --recursive</code> - Download files recursively.</li>
+                <li><code>-l <number></code> - Set the maximum recursion depth.</li>
+                <li><code>-k, --convert-links</code> - Convert links for local viewing.</li>
+                <li><code>-p, --page-requisites</code> - Download all necessary elements for HTML pages.</li>
+                <li><code>-q, --quiet</code> - Turn off output.</li>
+                <li><code>-c, --continue</code> - Resume a partially downloaded file.</li>
+                <li><code>-O <file></code> - Save the downloaded file as <code>file</code>.</li>
+                <li><code>--limit-rate=<rate></code> - Limit the download speed to <code>rate</code>.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Examples of <code>wget</code> Command</h2>
+
+            <h3>Download a Single File</h3>
+            <div class="code-block">
+                <code>wget https://example.com/file.zip</code>
+            </div>
+            <p>This command downloads the specified file from the provided URL.</p>
+
+            <h3>Download a File and Save with a Different Name</h3>
+            <div class="code-block">
+                <code>wget -O newfile.zip https://example.com/file.zip</code>
+            </div>
+            <p>This command downloads the file and saves it as <code>newfile.zip</code>.</p>
+
+            <h3>Download a Webpage and Its Assets</h3>
+            <div class="code-block">
+                <code>wget -p https://example.com</code>
+            </div>
+            <p>This command downloads the specified webpage along with all the assets required to display it properly.</p>
+
+            <h3>Download Files Recursively</h3>
+            <div class="code-block">
+                <code>wget -r https://example.com/files/</code>
+            </div>
+            <p>This command recursively downloads all files from the specified directory.</p>
+
+            <h3>Limit Download Speed</h3>
+            <div class="code-block">
+                <code>wget --limit-rate=200k https://example.com/largefile.zip</code>
+            </div>
+            <p>This command limits the download speed to 200 KB/s.</p>
+        </section>
+
+        <section>
+            <h2>Understanding wget Output</h2>
+            <p>The output of the <code>wget</code> command includes information about the download progress, including:</p>
+            <ul>
+                <li><strong>Percentage:</strong> Indicates how much of the file has been downloaded.</li>
+                <li><strong>Download Speed:</strong> Displays the current download speed.</li>
+                <li><strong>Estimated Time:</strong> Shows the estimated time remaining for the download.</li>
+                <li><strong>Downloaded Size:</strong> Shows the total size of the file being downloaded.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>-V, --version</code></td>
+                        <td>Display version information and exit.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-h, --help</code></td>
+                        <td>Display a help message and exit.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-b, --background</code></td>
+                        <td>Go to background after startup.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-N, --timestamping</code></td>
+                        <td>Don't re-download files unless newer.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-P <directory></code></td>
+                        <td>Set the directory prefix to <code>directory</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-r, --recursive</code></td>
+                        <td>Download files recursively.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-l <number></code></td>
+                        <td>Set the maximum recursion depth.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-k, --convert-links</code></td>
+                        <td>Convert links for local viewing.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-p, --page-requisites</code></td>
+                        <td>Download all necessary elements for HTML pages.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-q, --quiet</code></td>
+                        <td>Turn off output.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-c, --continue</code></td>
+                        <td>Resume a partially downloaded file.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-O <file></code></td>
+                        <td>Save the downloaded file as <code>file</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--limit-rate=<rate></code></td>
+                        <td>Limit the download speed to <code>rate</code>.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

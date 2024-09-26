@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>curl Command Explanation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>curl</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>curl</code></h2>
+            <p>The <code>curl</code> command is a versatile tool for transferring data to or from a server using various protocols, including HTTP, HTTPS, FTP, and more. It is commonly used for making API requests, downloading files, and testing web services.</p>
+            <div class="code-block">
+                <code>curl [OPTIONS] [URL]</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Common Options for <code>curl</code></h2>
+            <p><code>curl</code> has a rich set of options that can be used to customize its behavior:</p>
+            <ul>
+                <li><code>-V, --version</code> - Show version information and exit.</li>
+                <li><code>-h, --help</code> - Display help information and exit.</li>
+                <li><code-<code>-d, --data <data></code> - Send specified data in a POST request.</li>
+                <li><code>-X <command></code> - Specify a custom request method to use (e.g., GET, POST).</li>
+                <li><code>-H <header></code> - Pass custom header(s) to the server.</li>
+                <li><code>-o <file></code> - Write output to the specified file instead of stdout.</li>
+                <li><code>-O</code> - Save the file with its original name from the server.</li>
+                <li><code>-L, --location</code> - Follow redirects.</li>
+                <li><code>-u <user:password></code> - Specify user and password for server authentication.</li>
+                <li><code>-i</code> - Include HTTP response headers in the output.</li>
+                <li><code>-s, --silent</code> - Silent mode (no output). Use with -S to show errors.</li>
+                <li><code>--limit-rate <rate></code> - Limit the download speed to <code>rate</code>.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Examples of <code>curl</code> Command</h2>
+
+            <h3>Fetch a Webpage</h3>
+            <div class="code-block">
+                <code>curl https://example.com</code>
+            </div>
+            <p>This command retrieves the content of the specified URL.</p>
+
+            <h3>Download a File</h3>
+            <div class="code-block">
+                <code>curl -O https://example.com/file.zip</code>
+            </div>
+            <p>This command downloads the file and saves it with its original name.</p>
+
+            <h3>Send Data in a POST Request</h3>
+            <div class="code-block">
+                <code>curl -d "name=John&age=30" -X POST https://example.com/api</code>
+            </div>
+            <p>This command sends data to the specified API using a POST request.</p>
+
+            <h3>Follow Redirects</h3>
+            <div class="code-block">
+                <code>curl -L https://example.com/redirect</code>
+            </div>
+            <p>This command follows any redirects until it reaches the final URL.</p>
+
+            <h3>Send Custom Headers</h3>
+            <div class="code-block">
+                <code>curl -H "Authorization: Bearer token" https://example.com/api</code>
+            </div>
+            <p>This command includes a custom header in the request for authentication.</p>
+        </section>
+
+        <section>
+            <h2>Understanding curl Output</h2>
+            <p>The output of the <code>curl</code> command can include:</p>
+            <ul>
+                <li><strong>HTTP Status Code:</strong> Indicates the result of the request (e.g., 200 for success).</li>
+                <li><strong>Response Body:</strong> Contains the data returned by the server.</li>
+                <li><strong>Response Headers:</strong> Metadata about the response (if using the -i option).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>-V, --version</code></td>
+                        <td>Show version information and exit.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-h, --help</code></td>
+                        <td>Display help information and exit.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-d, --data <data></code></td>
+                        <td>Send specified data in a POST request.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-X <command></code></td>
+                        <td>Specify a custom request method to use (e.g., GET, POST).</td>
+                    </tr>
+                    <tr>
+                        <td><code>-H <header></code></td>
+                        <td>Pass custom header(s) to the server.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-o <file></code></td>
+                        <td>Write output to the specified file instead of stdout.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-O</code></td>
+                        <td>Save the file with its original name from the server.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-L, --location</code></td>
+                        <td>Follow redirects.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-u <user:password></code></td>
+                        <td>Specify user and password for server authentication.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-i</code></td>
+                        <td>Include HTTP response headers in the output.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-s, --silent</code></td>
+                        <td>Silent mode (no output). Use with -S to show errors.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--limit-rate <rate></code></td>
+                        <td>Limit the download speed to <code>rate</code>.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

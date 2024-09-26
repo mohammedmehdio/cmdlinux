@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ifconfig Command Explanation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>ifconfig</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>ifconfig</code></h2>
+            <p>The <code>ifconfig</code> command is used to configure and display network interface parameters for a Linux system. It allows users to view network interface information and manage network configurations.</p>
+            <div class="code-block">
+                <code>ifconfig [INTERFACE] [OPTIONS]</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Options Available with <code>ifconfig</code></h2>
+
+            <h3><code>interface</code></h3>
+            <p>Specify the network interface to configure or display. For example, <code>eth0</code>, <code>wlan0</code>, etc.</p>
+            <div class="code-block">
+                <code>ifconfig eth0</code>
+            </div>
+
+            <h3><code>up</code></h3>
+            <p>Activate the specified interface:</p>
+            <div class="code-block">
+                <code>ifconfig eth0 up</code>
+            </div>
+
+            <h3><code>down</code></h3>
+            <p>Deactivate the specified interface:</p>
+            <div class="code-block">
+                <code>ifconfig eth0 down</code>
+            </div>
+
+            <h3><code>inet <i>address</i></code></h3>
+            <p>Assign an IP address to the specified interface:</p>
+            <div class="code-block">
+                <code>ifconfig eth0 inet 192.168.1.100</code>
+            </div>
+
+            <h3><code>netmask <i>mask</i></code></h3>
+            <p>Assign a netmask to the specified interface:</p>
+            <div class="code-block">
+                <code>ifconfig eth0 netmask 255.255.255.0</code>
+            </div>
+
+            <h3><code>broadcast <i>address</i></code></h3>
+            <p>Assign a broadcast address to the specified interface:</p>
+            <div class="code-block">
+                <code>ifconfig eth0 broadcast 192.168.1.255</code>
+            </div>
+
+            <h3><code>hw ether <i>address</i></code></h3>
+            <p>Change the hardware (MAC) address of the interface:</p>
+            <div class="code-block">
+                <code>ifconfig eth0 hw ether 00:11:22:33:44:55</code>
+            </div>
+
+            <h3><code>mtu <i>size</i></code></h3>
+            <p>Set the Maximum Transmission Unit (MTU) size:</p>
+            <div class="code-block">
+                <code>ifconfig eth0 mtu 1400</code>
+            </div>
+
+            <h3><code>-a</code></h3>
+            <p>Show all interfaces, including those that are down:</p>
+            <div class="code-block">
+                <code>ifconfig -a</code>
+            </div>
+
+            <h3><code>-s</code></h3>
+            <p>Display a short summary of the network interfaces:</p>
+            <div class="code-block">
+                <code>ifconfig -s</code>
+            </div>
+
+            <h3><code>-h</code></h3>
+            <p>Display help information for the command:</p>
+            <div class="code-block">
+                <code>ifconfig -h</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Examples of <code>ifconfig</code> Command</h2>
+
+            <h3>Display Network Interfaces</h3>
+            <div class="code-block">
+                <code>ifconfig</code>
+            </div>
+            <p>This command displays all active network interfaces and their configurations.</p>
+
+            <h3>Activate a Network Interface</h3>
+            <div class="code-block">
+                <code>ifconfig eth0 up</code>
+            </div>
+            <p>This command activates the <code>eth0</code> interface.</p>
+
+            <h3>Deactivate a Network Interface</h3>
+            <div class="code-block">
+                <code>ifconfig eth0 down</code>
+            </div>
+            <p>This command deactivates the <code>eth0</code> interface.</p>
+
+            <h3>Set an IP Address</h3>
+            <div class="code-block">
+                <code>ifconfig eth0 inet 192.168.1.100 netmask 255.255.255.0</code>
+            </div>
+            <p>This command assigns the IP address <code>192.168.1.100</code> to the <code>eth0</code> interface with the specified netmask.</p>
+        </section>
+
+        <section>
+            <h2>Understanding ifconfig Output</h2>
+            <p>The output of the <code>ifconfig</code> command typically includes the following information:</p>
+            <ul>
+                <li><strong>Interface Name:</strong> The name of the network interface (e.g., <code>eth0</code>, <code>wlan0</code>).</li>
+                <li><strong>inet:</strong> The assigned IP address for the interface.</li>
+                <li><strong>netmask:</strong> The netmask associated with the IP address.</li>
+                <li><strong>broadcast:</strong> The broadcast address for the network.</li>
+                <li><strong>ether:</strong> The hardware (MAC) address of the interface.</li>
+                <li><strong>RX packets:</strong> The number of packets received.</li>
+                <li><strong>TX packets:</strong> The number of packets transmitted.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>interface</code></td>
+                        <td>Specify the network interface to configure or display.</td>
+                    </tr>
+                    <tr>
+                        <td><code>up</code></td>
+                        <td>Activate the specified interface.</td>
+                    </tr>
+                    <tr>
+                        <td><code>down</code></td>
+                        <td>Deactivate the specified interface.</td>
+                    </tr>
+                    <tr>
+                        <td><code>inet <i>address</i></code></td>
+                        <td>Assign an IP address to the specified interface.</td>
+                    </tr>
+                    <tr>
+                        <td><code>netmask <i>mask</i></code></td>
+                        <td>Assign a netmask to the specified interface.</td>
+                    </tr>
+                    <tr>
+                        <td><code>broadcast <i>address</i></code></td>
+                        <td>Assign a broadcast address to the specified interface.</td>
+                    </tr>
+                    <tr>
+                        <td><code>hw ether <i>address</i></code></td>
+                        <td>Change the hardware (MAC) address of the interface.</td>
+                    </tr>
+                    <tr>
+                        <td><code>mtu <i>size</i></code></td>
+                        <td>Set the Maximum Transmission Unit (MTU) size.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-a</code></td>
+                        <td>Show all interfaces, including those that are down.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-s</code></td>
+                        <td>Display a short summary of the network interfaces.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-h</code></td>
+                        <td>Display help information for the command.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
