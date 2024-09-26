@@ -6,7 +6,7 @@
 
 - <b>PM3</b> : Process Management.
 
-- <b>SM4</b : System Monitoring.
+- <b>SM4</b> : System Monitoring.
 
 - <b>NM5</b> : Network Management.
 
