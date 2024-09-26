@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uptime Command Explanation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>uptime</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>uptime</code></h2>
+            <p>The <code>uptime</code> command is used to display how long the system has been running, along with additional information such as the number of users currently logged in and the system load averages over the last 1, 5, and 15 minutes.</p>
+            <div class="code-block">
+                <code>uptime [OPTION]...</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Options Available with <code>uptime</code></h2>
+
+            <h3><code>-p</code> (Pretty)</h3>
+            <p>Display the uptime in a more human-readable format:</p>
+            <div class="code-block">
+                <code>uptime -p</code>
+            </div>
+
+            <h3><code>-h</code> (Help)</h3>
+            <p>Display help information for the command:</p>
+            <div class="code-block">
+                <code>uptime -h</code>
+            </div>
+
+            <h3><code>--help</code></h3>
+            <p>Display help information for the command:</p>
+            <div class="code-block">
+                <code>uptime --help</code>
+            </div>
+
+            <h3><code>--version</code></h3>
+            <p>Display the version information of the command:</p>
+            <div class="code-block">
+                <code>uptime --version</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Examples of <code>uptime</code> Command</h2>
+
+            <h3>Display System Uptime</h3>
+            <div class="code-block">
+                <code>uptime</code>
+            </div>
+            <p>This command displays the current time, how long the system has been up, the number of users logged in, and the load averages for the last 1, 5, and 15 minutes.</p>
+
+            <h3>Display Uptime in Human-readable Format</h3>
+            <div class="code-block">
+                <code>uptime -p</code>
+            </div>
+            <p>This command shows a more readable format of uptime, such as "up 1 hour, 20 minutes".</p>
+        </section>
+
+        <section>
+            <h2>Understanding Uptime Output</h2>
+            <p>The output of the <code>uptime</code> command typically includes the following information:</p>
+            <ul>
+                <li><strong>Current time:</strong> The current system time.</li>
+                <li><strong>Uptime:</strong> The duration the system has been running.</li>
+                <li><strong>Number of users:</strong> How many users are currently logged into the system.</li>
+                <li><strong>Load averages:</strong> The system load average over the last 1, 5, and 15 minutes.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>-p</code></td>
+                        <td>Display the uptime in a human-readable format.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-h</code></td>
+                        <td>Display help information for the command.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--help</code></td>
+                        <td>Display help information for the command.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--version</code></td>
+                        <td>Display the version information of the command.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

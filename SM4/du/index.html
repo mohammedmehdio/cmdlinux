@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>du Command Explanation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>du</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>du</code></h2>
+            <p>The <code>du</code> (Disk Usage) command is used to estimate file space usage of directories and their contents. It provides a summary of the disk usage for each specified directory, displaying the amount of space used by files and subdirectories.</p>
+            <div class="code-block">
+                <code>du [OPTION]... [DIRECTORY]...</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Options Available with <code>du</code></h2>
+
+            <h3><code>-h</code> (Human-readable)</h3>
+            <p>Display sizes in human-readable format (e.g., KB, MB, GB):</p>
+            <div class="code-block">
+                <code>du -h</code>
+            </div>
+
+            <h3><code>-s</code> (Summary)</h3>
+            <p>Display only the total size for each specified directory, without listing sizes of subdirectories:</p>
+            <div class="code-block">
+                <code>du -s</code>
+            </div>
+
+            <h3><code>-a</code> (All files)</h3>
+            <p>Include files in the output, not just directories:</p>
+            <div class="code-block">
+                <code>du -a</code>
+            </div>
+
+            <h3><code>-c</code> (Total)</h3>
+            <p>Display a grand total for all arguments after displaying their individual sizes:</p>
+            <div class="code-block">
+                <code>du -c</code>
+            </div>
+
+            <h3><code>-d</code> <i>N</i> (Depth)</h3>
+            <p>Limit the output to a specified depth of directories:</p>
+            <div class="code-block">
+                <code>du -d N</code>
+            </div>
+
+            <h3><code>--max-depth=<i>N</i></code></h3>
+            <p>Similar to <code>-d</code>, limit the output to a maximum depth of N directories:</p>
+            <div class="code-block">
+                <code>du --max-depth=N</code>
+            </div>
+
+            <h3><code>--help</code></h3>
+            <p>Display help information for the command:</p>
+            <div class="code-block">
+                <code>du --help</code>
+            </div>
+
+            <h3><code>--version</code></h3>
+            <p>Display the version information of the command:</p>
+            <div class="code-block">
+                <code>du --version</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Examples of <code>du</code> Command</h2>
+
+            <h3>Display Disk Usage of Current Directory</h3>
+            <div class="code-block">
+                <code>du</code>
+            </div>
+            <p>This command displays the disk usage of all files and directories in the current directory.</p>
+
+            <h3>Display Human-readable Output</h3>
+            <div class="code-block">
+                <code>du -h</code>
+            </div>
+            <p>This command shows the disk usage in a more readable format with units (KB, MB, GB).</p>
+
+            <h3>Display Summary for a Directory</h3>
+            <div class="code-block">
+                <code>du -sh /path/to/directory</code>
+            </div>
+            <p>This command displays the total disk usage for the specified directory.</p>
+        </section>
+
+        <section>
+            <h2>Understanding Disk Usage Information</h2>
+            <p>The output of the <code>du</code> command typically includes the following columns:</p>
+            <ul>
+                <li><strong>Size:</strong> Amount of space used by the files or directories listed.</li>
+                <li><strong>Directory/File:</strong> The name of the directory or file.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>-h</code></td>
+                        <td>Display sizes in human-readable format.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-s</code></td>
+                        <td>Display only the total size for each specified directory.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-a</code></td>
+                        <td>Include files in the output.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-c</code></td>
+                        <td>Display a grand total for all arguments.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-d N</code></td>
+                        <td>Limit the output to a specified depth of directories.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--max-depth=N</code></td>
+                        <td>Limit the output to a maximum depth of N directories.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--help</code></td>
+                        <td>Display help information for the command.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--version</code></td>
+                        <td>Display the version information of the command.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
