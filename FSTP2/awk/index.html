@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>awk Command Explanation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>awk</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>awk</code></h2>
+            <p>The <code>awk</code> command is a powerful tool for pattern scanning and processing in text files. It processes each line in a file, splitting them into fields based on a delimiter and performing actions on these fields.</p>
+            <div class="code-block">
+                <code>awk 'pattern { action }' [file...]</code>
+            </div>
+            <p>Where <code>pattern</code> is the condition for processing a line and <code>action</code> is the operation performed on the matched lines.</p>
+        </section>
+
+        <section>
+            <h2>Options Available with <code>awk</code></h2>
+
+            <h3><code>awk '{print}' [file]</code> (Basic Output)</h3>
+            <p>Prints each line of the file:</p>
+            <div class="code-block">
+                <code>awk '{print}' file.txt</code>
+            </div>
+            <p>This command prints all lines from <code>file.txt</code> without any filtering.</p>
+
+            <h3><code>awk '{print $1}' [file]</code> (Print Specific Fields)</h3>
+            <p>Prints the first field from each line:</p>
+            <div class="code-block">
+                <code>awk '{print $1}' file.txt</code>
+            </div>
+            <p>This will print only the first word or field from each line in the file.</p>
+
+            <h3><code>awk -F ":" '{print $1}' [file]</code> (Custom Field Separator)</h3>
+            <p>Use a custom field separator (in this case, a colon <code>:</code>):</p>
+            <div class="code-block">
+                <code>awk -F ":" '{print $1}' file.txt</code>
+            </div>
+            <p>This prints the first field from each line using the colon as a delimiter, common in files like <code>/etc/passwd</code>.</p>
+
+            <h3><code>awk '/pattern/ {print}' [file]</code> (Pattern Matching)</h3>
+            <p>Search for a pattern in the file and print matching lines:</p>
+            <div class="code-block">
+                <code>awk '/example/ {print}' file.txt</code>
+            </div>
+            <p>This prints only the lines that contain the word "example".</p>
+
+            <h3><code>awk '{print $1, $3}' [file]</code> (Print Multiple Fields)</h3>
+            <p>Print multiple fields from each line:</p>
+            <div class="code-block">
+                <code>awk '{print $1, $3}' file.txt</code>
+            </div>
+            <p>This prints both the first and third fields from each line.</p>
+
+            <h3><code>awk 'NR==3' [file]</code> (Print Specific Line)</h3>
+            <p>Print only the third line from the file:</p>
+            <div class="code-block">
+                <code>awk 'NR==3' file.txt</code>
+            </div>
+            <p>This command outputs the third line of the file.</p>
+
+            <h3><code>awk 'NR==2, NR==4' [file]</code> (Print a Range of Lines)</h3>
+            <p>Print a range of lines (e.g., from line 2 to line 4):</p>
+            <div class="code-block">
+                <code>awk 'NR==2, NR==4' file.txt</code>
+            </div>
+            <p>This command prints lines 2, 3, and 4 from the file.</p>
+
+            <h3><code>awk '{sum += $1} END {print sum}' [file]</code> (Sum a Field)</h3>
+            <p>Sum the values of a specific field:</p>
+            <div class="code-block">
+                <code>awk '{sum += $1} END {print sum}' file.txt</code>
+            </div>
+            <p>This command adds all the values in the first field and prints the total.</p>
+
+            <h3><code>awk '{if ($1 > 10) print}' [file]</code> (Conditional Statements)</h3>
+            <p>Print lines where the first field is greater than 10:</p>
+            <div class="code-block">
+                <code>awk '{if ($1 > 10) print}' file.txt</code>
+            </div>
+            <p>This command only prints lines where the first field has a value greater than 10.</p>
+
+            <h3><code>awk 'BEGIN {print "Header"} {print $1} END {print "Footer"}' [file]</code> (BEGIN and END Blocks)</h3>
+            <p>Print a header before processing and a footer after processing:</p>
+            <div class="code-block">
+                <code>awk 'BEGIN {print "Header"} {print $1} END {print "Footer"}' file.txt</code>
+            </div>
+            <p>This prints "Header" first, then the first field from each line, followed by "Footer" at the end.</p>
+
+            <h3><code>awk --help</code></h3>
+            <p>Displays help information for the <code>awk</code> command:</p>
+            <div class="code-block">
+                <code>awk --help</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>awk '{print}' [file]</code></td>
+                        <td>Prints each line from the file.</td>
+                    </tr>
+                    <tr>
+                        <td><code>awk '{print $1}' [file]</code></td>
+                        <td>Prints the first field of each line.</td>
+                    </tr>
+                    <tr>
+                        <td><code>awk -F ":" '{print $1}' [file]</code></td>
+                        <td>Use a colon as the field delimiter.</td>
+                    </tr>
+                    <tr>
+                        <td><code>awk '/pattern/ {print}' [file]</code></td>
+                        <td>Print lines that match a given pattern.</td>
+                    </tr>
+                    <tr>
+                        <td><code>awk '{print $1, $3}' [file]</code></td>
+                        <td>Print multiple fields.</td>
+                    </tr>
+                    <tr>
+                        <td><code>awk 'NR==3' [file]</code></td>
+                        <td>Print only the third line from the file.</td>
+                    </tr>
+                    <tr>
+                        <td><code>awk 'NR==2, NR==4' [file]</code></td>
+                        <td>Print a range of lines (from line 2 to 4).</td>
+                    </tr>
+                    <tr>
+                        <td><code>awk '{sum += $1} END {print sum}' [file]</code></td>
+                        <td>Sum the values of a field.</td>
+                    </tr>
+                    <tr>
+                        <td><code>awk '{if ($1 > 10) print}' [file]</code></td>
+                        <td>Print lines where the first field is greater than 10.</td>
+                    </tr>
+                    <tr>
+                        <td><code>awk 'BEGIN {print "Header"} {print $1} END {print "Footer"}' [file]</code></td>
+                        <td>Print a header, process lines, and print a footer.</td>
+                    </tr>
+                    <tr>
+                        <td><code>awk --help</code></td>
+                        <td>Display help information for <code>awk</code>.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Manual Pages</h2>
+            <p>For more detailed information, use the manual page for the <code>awk</code> command:</p>
+            <div class="code-block">
+                <code>man awk</code>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

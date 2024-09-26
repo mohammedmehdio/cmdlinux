@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grep Command Explanation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>grep</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>grep</code></h2>
+            <p>The <code>grep</code> command is used to search for patterns within text files. It searches line-by-line and returns the lines that match the given pattern.</p>
+            <div class="code-block">
+                <code>grep [options] pattern [file...]</code>
+            </div>
+            <p>Where <code>[pattern]</code> is the string or regular expression you're searching for, and <code>[file...]</code> is one or more files in which to search.</p>
+        </section>
+
+        <section>
+            <h2>Options Available with <code>grep</code></h2>
+
+            <h3><code>grep pattern [file]</code> (Basic Search)</h3>
+            <p>Search for a pattern in a file:</p>
+            <div class="code-block">
+                <code>grep "example" file.txt</code>
+            </div>
+            <p>This command searches for the word "example" in <code>file.txt</code>.</p>
+
+            <h3><code>grep -i pattern [file]</code> (Case-Insensitive Search)</h3>
+            <p>Perform a case-insensitive search:</p>
+            <div class="code-block">
+                <code>grep -i "example" file.txt</code>
+            </div>
+            <p>This command finds occurrences of "example", "Example", or any case variant in the file.</p>
+
+            <h3><code>grep -r pattern [directory]</code> (Recursive Search)</h3>
+            <p>Search for a pattern recursively through all files in a directory:</p>
+            <div class="code-block">
+                <code>grep -r "example" /path/to/directory/</code>
+            </div>
+            <p>This command will search for "example" in all files under the specified directory and its subdirectories.</p>
+
+            <h3><code>grep -v pattern [file]</code> (Invert Match)</h3>
+            <p>Exclude lines that match the pattern:</p>
+            <div class="code-block">
+                <code>grep -v "example" file.txt</code>
+            </div>
+            <p>This will display all lines that do not contain the word "example".</p>
+
+            <h3><code>grep -n pattern [file]</code> (Show Line Numbers)</h3>
+            <p>Display the matching line numbers in addition to the matching lines:</p>
+            <div class="code-block">
+                <code>grep -n "example" file.txt</code>
+            </div>
+            <p>This will show both the line number and the line itself that contains the pattern "example".</p>
+
+            <h3><code>grep -l pattern [file...]</code> (List Files with Matches)</h3>
+            <p>Display only the names of files with matching lines:</p>
+            <div class="code-block">
+                <code>grep -l "example" *.txt</code>
+            </div>
+            <p>This command lists all <code>.txt</code> files that contain the word "example".</p>
+
+            <h3><code>grep -c pattern [file]</code> (Count Matching Lines)</h3>
+            <p>Show the number of lines that match the pattern:</p>
+            <div class="code-block">
+                <code>grep -c "example" file.txt</code>
+            </div>
+            <p>This will display the number of lines that contain the word "example" in the file.</p>
+
+            <h3><code>grep -w pattern [file]</code> (Match Whole Words)</h3>
+            <p>Search only for whole words that match the pattern:</p>
+            <div class="code-block">
+                <code>grep -w "example" file.txt</code>
+            </div>
+            <p>This will match only the word "example" as a complete word and not parts of other words like "examples".</p>
+
+            <h3><code>grep -E pattern [file]</code> (Extended Regular Expressions)</h3>
+            <p>Use extended regular expressions in the search:</p>
+            <div class="code-block">
+                <code>grep -E "(example|test)" file.txt</code>
+            </div>
+            <p>This allows for more complex pattern matching, like finding either "example" or "test".</p>
+
+            <h3><code>grep -A [n] pattern [file]</code> (Show Lines After Match)</h3>
+            <p>Show <code>n</code> lines after each matching line:</p>
+            <div class="code-block">
+                <code>grep -A 3 "example" file.txt</code>
+            </div>
+            <p>This will display the matched line along with the 3 lines that follow it.</p>
+
+            <h3><code>grep -B [n] pattern [file]</code> (Show Lines Before Match)</h3>
+            <p>Show <code>n</code> lines before each matching line:</p>
+            <div class="code-block">
+                <code>grep -B 3 "example" file.txt</code>
+            </div>
+            <p>This will display the matched line along with the 3 lines that precede it.</p>
+
+            <h3><code>grep -C [n] pattern [file]</code> (Show Context Around Match)</h3>
+            <p>Show <code>n</code> lines before and after each matching line:</p>
+            <div class="code-block">
+                <code>grep -C 3 "example" file.txt</code>
+            </div>
+            <p>This will show 3 lines before and 3 lines after the matched line.</p>
+
+            <h3><code>grep --help</code></h3>
+            <p>Displays help information for the <code>grep</code> command:</p>
+            <div class="code-block">
+                <code>grep --help</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>grep pattern [file]</code></td>
+                        <td>Search for a pattern in a file.</td>
+                    </tr>
+                    <tr>
+                        <td><code>grep -i pattern [file]</code></td>
+                        <td>Perform a case-insensitive search.</td>
+                    </tr>
+                    <tr>
+                        <td><code>grep -r pattern [directory]</code></td>
+                        <td>Search recursively in all files under a directory.</td>
+                    </tr>
+                    <tr>
+                        <td><code>grep -v pattern [file]</code></td>
+                        <td>Exclude lines that match the pattern.</td>
+                    </tr>
+                    <tr>
+                        <td><code>grep -n pattern [file]</code></td>
+                        <td>Show line numbers for matching lines.</td>
+                    </tr>
+                    <tr>
+                        <td><code>grep -l pattern [file...]</code></td>
+                        <td>List file names that contain the pattern.</td>
+                    </tr>
+                    <tr>
+                        <td><code>grep -c pattern [file]</code></td>
+                        <td>Count matching lines.</td>
+                    </tr>
+                    <tr>
+                        <td><code>grep -w pattern [file]</code></td>
+                        <td>Match whole words only.</td>
+                    </tr>
+                    <tr>
+                        <td><code>grep -E pattern [file]</code></td>
+                        <td>Use extended regular expressions.</td>
+                    </tr>
+                    <tr>
+                        <td><code>grep -A [n] pattern [file]</code></td>
+                        <td>Show <code>n</code> lines after each match.</td>
+                    </tr>
+                    <tr>
+                        <td><code>grep -B [n] pattern [file]</code></td>
+                        <td>Show <code>n</code> lines before each match.</td>
+                    </tr>
+                    <tr>
+                        <td><code>grep -C [n] pattern [file]</code></td>
+                        <td>Show <code>n</code> lines around each match.</td>
+                    </tr>
+                    <tr>
+                        <td><code>grep --help</code></td>
+                        <td>Display help for the command.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Manual Pages</h2>
+            <p>For more detailed information, use the manual page for the <code>grep</code> command:</p>
+            <div class="code-block">
+                <code>man grep</code>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

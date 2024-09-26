@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sed Command Explanation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>sed</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>sed</code></h2>
+            <p>The <code>sed</code> (stream editor) command is used to process and transform text in a file or input stream. It performs various operations like search, find and replace, insertion, or deletion of text.</p>
+            <div class="code-block">
+                <code>sed [OPTIONS] 'command' [file...]</code>
+            </div>
+            <p>The <code>command</code> part specifies what text transformations <code>sed</code> should perform.</p>
+        </section>
+
+        <section>
+            <h2>Options Available with <code>sed</code></h2>
+
+            <h3><code>sed 's/old/new/' [file]</code> (Substitute)</h3>
+            <p>Replaces the first occurrence of a pattern in each line:</p>
+            <div class="code-block">
+                <code>sed 's/old/new/' file.txt</code>
+            </div>
+            <p>This command replaces the first instance of "old" with "new" in every line of <code>file.txt</code>.</p>
+
+            <h3><code>sed 's/old/new/g' [file]</code> (Global Substitute)</h3>
+            <p>Replaces all occurrences of a pattern in each line:</p>
+            <div class="code-block">
+                <code>sed 's/old/new/g' file.txt</code>
+            </div>
+            <p>This command replaces every occurrence of "old" with "new" globally in each line of the file.</p>
+
+            <h3><code>sed 'n d' [file]</code> (Delete a Line)</h3>
+            <p>Delete a specific line in the file:</p>
+            <div class="code-block">
+                <code>sed '2d' file.txt</code>
+            </div>
+            <p>This deletes the second line in <code>file.txt</code>.</p>
+
+            <h3><code>sed '/pattern/d' [file]</code> (Delete Matching Lines)</h3>
+            <p>Delete all lines matching a pattern:</p>
+            <div class="code-block">
+                <code>sed '/example/d' file.txt</code>
+            </div>
+            <p>This deletes all lines that contain the word "example".</p>
+
+            <h3><code>sed -n 'p' [file]</code> (Print Specific Lines)</h3>
+            <p>Print specific lines or line ranges:</p>
+            <div class="code-block">
+                <code>sed -n '3p' file.txt</code>
+            </div>
+            <p>This prints only the third line from <code>file.txt</code>.</p>
+
+            <h3><code>sed 'a text' [file]</code> (Append Text)</h3>
+            <p>Append a line of text after a specific line:</p>
+            <div class="code-block">
+                <code>sed '3a New line appended' file.txt</code>
+            </div>
+            <p>This appends the text "New line appended" after the third line.</p>
+
+            <h3><code>sed 'i text' [file]</code> (Insert Text)</h3>
+            <p>Insert a line of text before a specific line:</p>
+            <div class="code-block">
+                <code>sed '3i Inserted line' file.txt</code>
+            </div>
+            <p>This inserts "Inserted line" before the third line.</p>
+
+            <h3><code>sed 's/old/new/w output.txt' [file]</code> (Write to File)</h3>
+            <p>Write the result of the substitution to another file:</p>
+            <div class="code-block">
+                <code>sed 's/old/new/w output.txt' file.txt</code>
+            </div>
+            <p>This command replaces "old" with "new" and writes the result to <code>output.txt</code>.</p>
+
+            <h3><code>sed '1,3 s/old/new/' [file]</code> (Range of Lines)</h3>
+            <p>Substitute text only within a range of lines:</p>
+            <div class="code-block">
+                <code>sed '1,3 s/old/new/' file.txt</code>
+            </div>
+            <p>This replaces "old" with "new" only in lines 1 to 3.</p>
+
+            <h3><code>sed -i 's/old/new/' [file]</code> (In-place Editing)</h3>
+            <p>Modify the original file directly without creating a new one:</p>
+            <div class="code-block">
+                <code>sed -i 's/old/new/' file.txt</code>
+            </div>
+            <p>This replaces "old" with "new" in-place, updating <code>file.txt</code> directly.</p>
+
+            <h3><code>sed --help</code></h3>
+            <p>Displays help information for the <code>sed</code> command:</p>
+            <div class="code-block">
+                <code>sed --help</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>sed 's/old/new/' [file]</code></td>
+                        <td>Replace the first occurrence of a pattern.</td>
+                    </tr>
+                    <tr>
+                        <td><code>sed 's/old/new/g' [file]</code></td>
+                        <td>Replace all occurrences of a pattern.</td>
+                    </tr>
+                    <tr>
+                        <td><code>sed 'n d' [file]</code></td>
+                        <td>Delete a specific line.</td>
+                    </tr>
+                    <tr>
+                        <td><code>sed '/pattern/d' [file]</code></td>
+                        <td>Delete lines matching a pattern.</td>
+                    </tr>
+                    <tr>
+                        <td><code>sed -n 'p' [file]</code></td>
+                        <td>Print specific lines.</td>
+                    </tr>
+                    <tr>
+                        <td><code>sed 'a text' [file]</code></td>
+                        <td>Append text after a specific line.</td>
+                    </tr>
+                    <tr>
+                        <td><code>sed 'i text' [file]</code></td>
+                        <td>Insert text before a specific line.</td>
+                    </tr>
+                    <tr>
+                        <td><code>sed 's/old/new/w output.txt' [file]</code></td>
+                        <td>Write the result of substitution to a file.</td>
+                    </tr>
+                    <tr>
+                        <td><code>sed '1,3 s/old/new/' [file]</code></td>
+                        <td>Substitute text within a range of lines.</td>
+                    </tr>
+                    <tr>
+                        <td><code>sed -i 's/old/new/' [file]</code></td>
+                        <td>Edit a file in-place.</td>
+                    </tr>
+                    <tr>
+                        <td><code>sed --help</code></td>
+                        <td>Display help information for <code>sed</code>.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Manual Pages</h2>
+            <p>For more detailed information, use the manual page for the <code>sed</code> command:</p>
+            <div class="code-block">
+                <code>man sed</code>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

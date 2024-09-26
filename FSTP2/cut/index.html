@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cut Command Explanation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>cut</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>cut</code></h2>
+            <p>The <code>cut</code> command in Linux is used to extract sections from each line of files or input streams based on byte, character, or field positions.</p>
+            <div class="code-block">
+                <code>cut [OPTION]... [FILE]...</code>
+            </div>
+            <p>With <code>cut</code>, you can slice sections of data such as columns or fields from text files or outputs.</p>
+        </section>
+
+        <section>
+            <h2>Options Available with <code>cut</code></h2>
+
+            <h3><code>-b</code> (Select Bytes)</h3>
+            <p>Select specific bytes from a file:</p>
+            <div class="code-block">
+                <code>cut -b 1-4 file.txt</code>
+            </div>
+            <p>This command extracts bytes 1 through 4 from each line of <code>file.txt</code>.</p>
+
+            <h3><code>-c</code> (Select Characters)</h3>
+            <p>Extract specific characters:</p>
+            <div class="code-block">
+                <code>cut -c 2-5 file.txt</code>
+            </div>
+            <p>This command extracts characters 2 through 5 from each line of <code>file.txt</code>.</p>
+
+            <h3><code>-f</code> (Select Fields)</h3>
+            <p>Extract fields based on a delimiter (default is tab):</p>
+            <div class="code-block">
+                <code>cut -f 2,4 file.txt</code>
+            </div>
+            <p>This command extracts the 2nd and 4th fields from <code>file.txt</code>. Fields are separated by tabs by default.</p>
+
+            <h3><code>-d</code> (Define Delimiter)</h3>
+            <p>Specify the field delimiter (use with <code>-f</code>):</p>
+            <div class="code-block">
+                <code>cut -d ',' -f 1,3 file.txt</code>
+            </div>
+            <p>This command extracts the 1st and 3rd fields using a comma (',') as the delimiter.</p>
+
+            <h3><code>--complement</code> (Complement)</h3>
+            <p>Complement the selected range, i.e., select everything except the specified fields, bytes, or characters:</p>
+            <div class="code-block">
+                <code>cut -f 1 --complement file.txt</code>
+            </div>
+            <p>This command will select all fields except the 1st one.</p>
+
+            <h3><code>--output-delimiter</code> (Set Output Delimiter)</h3>
+            <p>Define a delimiter for the output:</p>
+            <div class="code-block">
+                <code>cut -d ',' -f 1,3 --output-delimiter='|' file.txt</code>
+            </div>
+            <p>This extracts the 1st and 3rd fields and separates them with a pipe character ('|') in the output.</p>
+
+            <h3><code>--help</code></h3>
+            <p>Display help information about the <code>cut</code> command:</p>
+            <div class="code-block">
+                <code>cut --help</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Examples of <code>cut</code> Command</h2>
+
+            <h3>Extracting Specific Characters</h3>
+            <div class="code-block">
+                <code>cut -c 1-3 file.txt</code>
+            </div>
+            <p>This command extracts the first three characters from each line in <code>file.txt</code>.</p>
+
+            <h3>Extracting Fields Using a Custom Delimiter</h3>
+            <div class="code-block">
+                <code>cut -d ':' -f 1,3 /etc/passwd</code>
+            </div>
+            <p>This command extracts the 1st and 3rd fields from the <code>/etc/passwd</code> file, where fields are delimited by a colon (':').</p>
+
+            <h3>Using Output Delimiter</h3>
+            <div class="code-block">
+                <code>cut -d ',' -f 2,4 --output-delimiter=' ' file.csv</code>
+            </div>
+            <p>In this case, the fields 2 and 4 from <code>file.csv</code> will be separated by a space (' ') in the output.</p>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>-b</code></td>
+                        <td>Select specific bytes from each line.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-c</code></td>
+                        <td>Select specific characters from each line.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-f</code></td>
+                        <td>Select specific fields (columns) from each line.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-d</code></td>
+                        <td>Specify the delimiter to be used for fields.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--complement</code></td>
+                        <td>Select everything except the specified range.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--output-delimiter</code></td>
+                        <td>Set the delimiter for the output fields.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--help</code></td>
+                        <td>Display help for the <code>cut</code> command.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Manual Pages</h2>
+            <p>For more detailed information, you can refer to the manual page for the <code>cut</code> command:</p>
+            <div class="code-block">
+                <code>man cut</code>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
