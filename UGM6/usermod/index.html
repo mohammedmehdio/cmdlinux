@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>usermod Command Explanation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>usermod</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>usermod</code></h2>
+            <p>The <code>usermod</code> command is used to modify an existing user account on a Linux system. It allows administrators to change various user account attributes and settings.</p>
+            <div class="code-block">
+                <code>usermod [OPTIONS] USERNAME</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Common Options for <code>usermod</code></h2>
+            <p>The <code>usermod</code> command supports a variety of options:</p>
+            <ul>
+                <li><code>-d, --home <path></code> - Change the user's home directory.</li>
+                <li><code>-m, --move-home</code> - Move the contents of the user's home directory to the new location specified by <code>-d</code>.</li>
+                <li><code>-s, --shell <shell></code> - Change the user's login shell.</li>
+                <li><code>-G, --groups <group1,[group2,...]></code> - Specify a comma-separated list of supplementary groups for the user.</li>
+                <li><code>-u, --uid <uid></code> - Change the numerical user ID for the user.</li>
+                <li><code>-g, --gid <group></code> - Change the user's primary group.</li>
+                <li><code>-l, --login <new_username></code> - Change the user's login name.</li>
+                <li><code>-p, --password <password></code> - Change the user's password (encrypted).</li>
+                <li><code>-e, --expiredate <date></code> - Set an expiration date for the user's account.</li>
+                <li><code>-f, --inactive <days></code> - Set the number of days after a password expires until the account is disabled.</li>
+                <li><code>-h, --help</code> - Display help information and exit.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Examples of <code>usermod</code> Command</h2>
+
+            <h3>Change User's Home Directory</h3>
+            <div class="code-block">
+                <code>sudo usermod -d /new/home/dir username</code>
+            </div>
+            <p>This command changes the home directory of <code>username</code> to <code>/new/home/dir</code>.</p>
+
+            <h3>Move User's Home Directory</h3>
+            <div class="code-block">
+                <code>sudo usermod -m -d /new/home/dir username</code>
+            </div>
+            <p>This command changes the home directory of <code>username</code> to <code>/new/home/dir</code> and moves the contents from the old directory to the new one.</p>
+
+            <h3>Change User's Shell</h3>
+            <div class="code-block">
+                <code>sudo usermod -s /bin/zsh username</code>
+            </div>
+            <p>This command changes the login shell of <code>username</code> to Zsh.</p>
+
+            <h3>Add User to a Group</h3>
+            <div class="code-block">
+                <code>sudo usermod -aG groupname username</code>
+            </div>
+            <p>This command adds <code>username</code> to the supplementary group <code>groupname</code> without removing them from other groups.</p>
+
+            <h3>Change User's Login Name</h3>
+            <div class="code-block">
+                <code>sudo usermod -l newusername oldusername</code>
+            </div>
+            <p>This command changes the login name of <code>oldusername</code> to <code>newusername</code>.</p>
+        </section>
+
+        <section>
+            <h2>Understanding User Modification Process</h2>
+            <p>When a user account is modified using the <code>usermod</code> command:</p>
+            <ul>
+                <li>The user's information is updated in the <code>/etc/passwd</code> file.</li>
+                <li>If the home directory is changed, the contents may be moved to the new location if <code>-m</code> is specified.</li>
+                <li>Group memberships may be altered based on the specified options.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>-d, --home <path></code></td>
+                        <td>Change the user's home directory.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-m, --move-home</code></td>
+                        <td>Move the contents of the user's home directory to the new location specified by <code>-d</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-s, --shell <shell></code></td>
+                        <td>Change the user's login shell.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-G, --groups <group1,[group2,...]></code></td>
+                        <td>Specify a comma-separated list of supplementary groups for the user.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-u, --uid <uid></code></td>
+                        <td>Change the numerical user ID for the user.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-g, --gid <group></code></td>
+                        <td>Change the user's primary group.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-l, --login <new_username></code></td>
+                        <td>Change the user's login name.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-p, --password <password></code></td>
+                        <td>Change the user's password (encrypted).</td>
+                    </tr>
+                    <tr>
+                        <td><code>-e, --expiredate <date></code></td>
+                        <td>Set an expiration date for the user's account.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-f, --inactive <days></code></td>
+                        <td>Set the number of days after a password expires until the account is disabled.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-h, --help</code></td>
+                        <td>Display help information and exit.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

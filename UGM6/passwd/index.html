@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>passwd Command Explanation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>passwd</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>passwd</code></h2>
+            <p>The <code>passwd</code> command is used to change a user's password in Linux systems. It allows users to set or modify their own passwords and, when executed by the root user, can change passwords for any user.</p>
+            <div class="code-block">
+                <code>passwd [OPTIONS] [USERNAME]</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Common Options for <code>passwd</code></h2>
+            <p>The <code>passwd</code> command supports several options:</p>
+            <ul>
+                <li><code>-d, --delete</code> - Delete the user's password, allowing access without a password.</li>
+                <li><code>-l, --lock</code> - Lock the user's password, preventing login.</li>
+                <li><code>-u, --unlock</code> - Unlock the user's password, allowing login again.</li>
+                <li><code>-e, --expire</code> - Expire the user's password immediately, forcing a change at the next login.</li>
+                <li><code--status</code> - Display the status of the user's password.</li>
+                <li><code>-h, --help</code> - Display help information and exit.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Examples of <code>passwd</code> Command</h2>
+
+            <h3>Change Own Password</h3>
+            <div class="code-block">
+                <code>passwd</code>
+            </div>
+            <p>This command prompts the user to enter their current password and then the new password to update it.</p>
+
+            <h3>Change Another User's Password</h3>
+            <div class="code-block">
+                <code>sudo passwd username</code>
+            </div>
+            <p>This command allows the root user to change the password for the specified <code>username</code>.</p>
+
+            <h3>Lock a User's Password</h3>
+            <div class="code-block">
+                <code>sudo passwd -l username</code>
+            </div>
+            <p>This command locks the password for <code>username</code>, preventing the user from logging in until the password is unlocked.</p>
+
+            <h3>Unlock a User's Password</h3>
+            <div class="code-block">
+                <code>sudo passwd -u username</code>
+            </div>
+            <p>This command unlocks the password for <code>username</code>, allowing them to log in again.</p>
+
+            <h3>Expire a User's Password</h3>
+            <div class="code-block">
+                <code>sudo passwd -e username</code>
+            </div>
+            <p>This command expires the password for <code>username</code>, requiring them to change it at the next login.</p>
+        </section>
+
+        <section>
+            <h2>Understanding Password Management</h2>
+            <p>When a password is changed using the <code>passwd</code> command:</p>
+            <ul>
+                <li>The new password is stored in an encrypted format in the <code>/etc/shadow</code> file.</li>
+                <li>Account locking prevents the user from logging in, even if they know the correct password.</li>
+                <li>Expiring a password forces the user to create a new one at the next login, enhancing security.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>-d, --delete</code></td>
+                        <td>Delete the user's password, allowing access without a password.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-l, --lock</code></td>
+                        <td>Lock the user's password, preventing login.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-u, --unlock</code></td>
+                        <td>Unlock the user's password, allowing login again.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-e, --expire</code></td>
+                        <td>Expire the user's password immediately.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--status</code></td>
+                        <td>Display the status of the user's password.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-h, --help</code></td>
+                        <td>Display help information and exit.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>su Command Explanation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>su</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>su</code></h2>
+            <p>The <code>su</code> (substitute user) command allows a permitted user to switch to another user account within the Linux environment. By default, it switches to the root user, unless specified otherwise.</p>
+            <div class="code-block">
+                <code>su [OPTION] [USER]</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Common Options for <code>su</code></h2>
+            <p>The <code>su</code> command comes with several options that modify its behavior:</p>
+            <ul>
+                <li><code>-l, --login</code> - Start the shell as a login shell (default when using <code>su</code> without a username).</li>
+                <li><code>-c, --command</code> - Execute a command as the specified user and then exit.</li>
+                <li><code>-s, --shell</code> - Specify a different shell for the new user session.</li>
+                <li><code>-m, --preserve-environment</code> - Keep the current environment variables (not recommended for security reasons).</li>
+                <li><code>-p, --preserve-environment</code> - Same as <code>-m</code>.</li>
+                <li><code>-, --login</code> - Similar to <code>-l</code>, makes the shell a login shell.</li>
+                <li><code>-h, --help</code> - Display help information and exit.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Examples of <code>su</code> Command</h2>
+
+            <h3>Switch to Root User</h3>
+            <div class="code-block">
+                <code>su</code>
+            </div>
+            <p>This command switches the current user to the root user. You will be prompted for the root password.</p>
+
+            <h3>Switch to a Specific User</h3>
+            <div class="code-block">
+                <code>su username</code>
+            </div>
+            <p>This command switches the current user to <code>username</code>. You will be prompted for that user's password.</p>
+
+            <h3>Execute a Command as Another User</h3>
+            <div class="code-block">
+                <code>su -c "command" username</code>
+            </div>
+            <p>This command executes <code>command</code> as <code>username</code> and then returns to the original user.</p>
+
+            <h3>Switch with a Login Shell</h3>
+            <div class="code-block">
+                <code>su -l username</code>
+            </div>
+            <p>This command switches to <code>username</code> and starts a login shell, initializing the user's environment.</p>
+        </section>
+
+        <section>
+            <h2>Understanding User Management</h2>
+            <p>The <code>su</code> command is crucial for user management in Linux. It allows for:</p>
+            <ul>
+                <li>Administrative tasks that require root privileges.</li>
+                <li>Switching to other user accounts for testing permissions and configurations.</li>
+                <li>Performing actions as different users to manage security and access.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Security Considerations</h2>
+            <p>Using <code>su</code> can expose your system to risks, especially when switching to the root user:</p>
+            <ul>
+                <li>Always be cautious when operating as root to avoid accidental system changes.</li>
+                <li>Consider using <code>sudo</code> for executing single commands with elevated privileges, which logs actions and reduces risks.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>-l, --login</code></td>
+                        <td>Start the shell as a login shell.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-c, --command</code></td>
+                        <td>Execute a command as the specified user and then exit.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-s, --shell</code></td>
+                        <td>Specify a different shell for the new user session.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-m, --preserve-environment</code></td>
+                        <td>Keep the current environment variables.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-h, --help</code></td>
+                        <td>Display help information and exit.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

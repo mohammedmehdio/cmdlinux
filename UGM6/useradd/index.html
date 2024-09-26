@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>useradd Command Explanation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding the <code>useradd</code> Command</h1>
+
+        <section>
+            <h2>Basic Usage of <code>useradd</code></h2>
+            <p>The <code>useradd</code> command is used to create a new user account on a Linux system. It is typically run with superuser privileges and allows administrators to specify various options to configure the new user's account settings.</p>
+            <div class="code-block">
+                <code>useradd [OPTIONS] USERNAME</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Common Options for <code>useradd</code></h2>
+            <p>The <code>useradd</code> command supports a variety of options:</p>
+            <ul>
+                <li><code>-d, --home <path></code> - Specify the home directory for the new user. Default is <code>/home/USERNAME</code>.</li>
+                <li><code>-m, --create-home</code> - Create the user's home directory if it does not exist.</li>
+                <li><code>-s, --shell <shell></code> - Specify the user's login shell. Default is usually <code>/bin/bash</code>.</li>
+                <li><code>-G, --groups <group1,[group2,...]></code> - Specify a comma-separated list of supplementary groups for the user.</li>
+                <li><code>-u, --uid <uid></code> - Specify a numerical user ID for the new user.</li>
+                <li><code>-g, --gid <group></code> - Specify the primary group for the new user.</li>
+                <li><code>-p, --password <password></code> - Set the user's password (encrypted).</li>
+                <li><code>-e, --expiredate <date></code> - Set an expiration date for the user's account.</li>
+                <li><code>-f, --inactive <days></code> - Set the number of days after a password expires until the account is disabled.</li>
+                <li><code>-r, --system</code> - Create a system account.</li>
+                <li><code>-h, --help</code> - Display help information and exit.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Examples of <code>useradd</code> Command</h2>
+
+            <h3>Create a New User</h3>
+            <div class="code-block">
+                <code>sudo useradd newuser</code>
+            </div>
+            <p>This command creates a new user named <code>newuser</code> with default settings.</p>
+
+            <h3>Create a User with a Home Directory</h3>
+            <div class="code-block">
+                <code>sudo useradd -m newuser</code>
+            </div>
+            <p>This command creates a new user <code>newuser</code> and also creates a home directory at <code>/home/newuser</code>.</p>
+
+            <h3>Create a User with a Specific Shell</h3>
+            <div class="code-block">
+                <code>sudo useradd -s /bin/zsh newuser</code>
+            </div>
+            <p>This command creates a new user <code>newuser</code> with the Zsh shell as the login shell.</p>
+
+            <h3>Create a User and Assign to a Group</h3>
+            <div class="code-block">
+                <code>sudo useradd -g developers newuser</code>
+            </div>
+            <p>This command creates <code>newuser</code> and assigns them to the <code>developers</code> primary group.</p>
+
+            <h3>Create a User with an Expiration Date</h3>
+            <div class="code-block">
+                <code>sudo useradd -e 2025-12-31 newuser</code>
+            </div>
+            <p>This command creates <code>newuser</code> and sets their account to expire on December 31, 2025.</p>
+        </section>
+
+        <section>
+            <h2>Understanding User Creation Process</h2>
+            <p>When a user is created using the <code>useradd</code> command:</p>
+            <ul>
+                <li>The user's information is added to the <code>/etc/passwd</code> file.</li>
+                <li>A home directory may be created based on the options provided.</li>
+                <li>Default configuration files may be copied to the new user's home directory.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Summary of Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>-d, --home <path></code></td>
+                        <td>Specify the home directory for the new user. Default is <code>/home/USERNAME</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-m, --create-home</code></td>
+                        <td>Create the user's home directory if it does not exist.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-s, --shell <shell></code></td>
+                        <td>Specify the user's login shell. Default is usually <code>/bin/bash</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-G, --groups <group1,[group2,...]></code></td>
+                        <td>Specify a comma-separated list of supplementary groups for the user.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-u, --uid <uid></code></td>
+                        <td>Specify a numerical user ID for the new user.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-g, --gid <group></code></td>
+                        <td>Specify the primary group for the new user.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-p, --password <password></code></td>
+                        <td>Set the user's password (encrypted).</td>
+                    </tr>
+                    <tr>
+                        <td><code>-e, --expiredate <date></code></td>
+                        <td>Set an expiration date for the user's account.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-f, --inactive <days></code></td>
+                        <td>Set the number of days after a password expires until the account is disabled.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-r, --system</code></td>
+                        <td>Create a system account.</td>
+                    </tr>
+                    <tr>
+                        <td><code>-h, --help</code></td>
+                        <td>Display help information and exit.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
