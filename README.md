@@ -1,23 +1,23 @@
-# KEYWORDS
+#  <h1 align="center">KEYWORDS</h1>
 
-FDO1 --> File and Directory Operations.
+- <b>FDO1</b> : File and Directory Operations.
 
-FSTP2 --> File Search and Text Processing.
+- <b>FSTP2</b> : File Search and Text Processing.
 
-PM3 --> Process Management.
+- <b>PM3</b> : Process Management.
 
-SM4 --> System Monitoring.
+- <b>SM4</b> : System Monitoring.
 
-NM5 --> Network Management.
+- <b>NM5</b> : Network Management.
 
-UGM6 --> User and Group Management.
+- <b>UGM6</b> : User and Group Management.
 
-HOME --> Home Page.
+- <b>HOME</b> : Home Page.
 
-# Description 
+# <h1 align="center" >Description</h1> 
 
-This website let you learn and find the Linux commande that you want in a blink of an eye.
+<h3 align="center">This website let you learn and find the Linux commande that you want in a blink of an eye.</h3>
 
 
 
--- All rights are reserved to Mohammed Mehdi Boudir --
+## All rights are reserved to <i> Mohammed Mehdi Boudir </i> 
