@@ -16,8 +16,8 @@
 
 # <h1 align="center" >Description</h1> 
 
-<h3 align="center">This website let you learn and find the Linux commande that you want in a blink of an eye.</h3>
+<h2 align="center">This website let you learn and find the Linux commande that you want in a blink of an eye.</h2>
 
-
+<br>
 
 ## All rights are reserved to <i> Mohammed Mehdi Boudir </i> 
