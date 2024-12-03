@@ -6,6 +6,10 @@ body {
     background-color: #f9f9f9;
 }
 
+h1{
+    text-align: center;
+}
+
 h1, h2 {
     color: #2c3e50;
 }
