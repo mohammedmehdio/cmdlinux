@@ -121,3 +121,21 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+.result-box {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    background-color: #fff;
+}
+
+.result-item {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.result-item:hover {
+    background-color: #f0f0f0;
+}
