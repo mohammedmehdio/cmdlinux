@@ -5,81 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linux Commands</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
     <header>
         <h1>Comprehensive List of Linux Commands</h1>
     </header>
+    <div class="search-box">
+        <div class="row">
+            <input type="text" id="input-box" placeholder="Search for a command ..." autocomplete="off">
+            <button><i class="material-icons">search</i></button>
+        </div>
+        <div class="result-box">
+            
+        </div>
+    </div>
+
     <div class="container">
         <section>
             <h2>File and Directory Operations</h2>
+            
             <ul>
-                <li><b>pwd</b> – Print working directory (current directory).</li>
-                <li><b>ls</b> – List directory contents.</li>
-                <li><b>cd</b> – Change directory.</li>
-                <li><b>mkdir</b> – Create a new directory.</li>
-                <li><b>rmdir</b> – Remove an empty directory.</li>
-                <li><b>rm</b> – Remove files or directories.</li>
-                <li><b>cp</b> – Copy files or directories.</li>
-                <li><b>mv</b> – Move or rename files or directories.</li>
-                <li><b>touch</b> – Create an empty file or update a file’s timestamp.</li>
-                <li><b>cat</b> – Concatenate and display file contents.</li>
+                <a href="FDO1/pwd/index.html"> <li id="pwd"><b>pwd</b> – Print working directory (current directory).</li></a>
+                <a href="FDO1/ls/index.html"><li id="ls"><b>ls</b> – List directory contents.</li></a>
+                <a href="FDO1/cd/index.html"> <li><b>cd</b> – Change directory.</li></a>
+                <a href="FDO1/mkdir/index.html"> <li><b>mkdir</b> – Create a new directory.</li></a>
+                <a href="FDO1/rmdir/index.html">  <li><b>rmdir</b> – Remove an empty directory.</li></a>
+                <a href="FDO1/rm/index.html">  <li><b>rm</b> – Remove files or directories.</li></a>
+                <a href="FDO1/cp/index.html"> <li><b>cp</b> – Copy files or directories.</li></a>
+                <a href="FDO1/mv/index.html"> <li><b>mv</b> – Move or rename files or directories.</li></a>
+                <a href="FDO1/touch/index.html"> <li><b>touch</b> – Create an empty file or update a file’s timestamp.</li></a>
+                <a href="FDO1/cat/index.html"> <li><b>cat</b> – Concatenate and display file contents.</li></a>
             </ul>
         </section>
 
         <section>
             <h2>File Search and Text Processing</h2>
             <ul>
-                <li><b>find</b> – Search for files in a directory hierarchy.</li>
-                <li><b>locate</b> – Find files by name using a pre-built database.</li>
-                <li><b>grep</b> – Search for patterns within files.</li>
-                <li><b>awk</b> – Pattern scanning and text processing.</li>
-                <li><b>sed</b> – Stream editor for filtering and transforming text.</li>
-                <li><b>cut</b> – Remove sections from each line of files.</li>
+                <a href="FSTP2/find/index.html"><li><b>find</b> – Search for files in a directory hierarchy.</li></a>
+                <a href="FSTP2/locate/index.html"><li><b>locate</b> – Find files by name using a pre-built database.</li></a>
+                <a href="FSTP2/grep/index.html"><li><b>grep</b> – Search for patterns within files.</li></a>
+                <a href="FSTP2/awk/index.html"><li><b>awk</b> – Pattern scanning and text processing.</li></a>
+                <a href="FSTP2/sed/index.html"><li><b>sed</b> – Stream editor for filtering and transforming text.</li></a>
+                <a href="FSTP2/cut/index.html"><li><b>cut</b> – Remove sections from each line of files.</li></a>
             </ul>
         </section>
 
         <section>
             <h2>Process Management</h2>
             <ul>
-                <li><b>ps</b> – Report a snapshot of current processes.</li>
-                <li><b>top</b> – Display Linux tasks.</li>
-                <li><b>htop</b> – Interactive process viewer.</li>
-                <li><b>kill</b> – Terminate a process by its PID.</li>
-                <li><b>jobs</b> – List active jobs.</li>
-                <li><b>nice</b> – Start a program with modified scheduling priority.</li>
+                <a href="PM3/ps/index.html"><li><b>ps</b> – Report a snapshot of current processes.</li></a>
+                <a href="PM3/top/index.html"><li><b>top</b> – Display Linux tasks.</li></a>
+                <a href="PM3/htop/index.html"><li><b>htop</b> – Interactive process viewer.</li></a>
+                <a href="PM3/kill/index.html"><li><b>kill</b> – Terminate a process by its PID.</li></a>
+                <a href="PM3/jobs/index.html"><li><b>jobs</b> – List active jobs.</li></a>
+                <a href="PM3/nice/index.html"><li><b>nice</b> – Start a program with modified scheduling priority.</li></a>
             </ul>
         </section>
 
         <section>
             <h2>System Monitoring</h2>
             <ul>
-                <li><b>df</b> – Report file system disk space usage.</li>
-                <li><b>du</b> – Estimate file space usage.</li>
-                <li><b>free</b> – Display free and used memory.</li>
-                <li><b>uptime</b> – Tell how long the system has been running.</li>
+                <a href="SM4/df/index.html"><li></li><li><b>df</b> – Report file system disk space usage.</li></a>
+                <a href="SM4/du/index.html"><li><b>du</b> – Estimate file space usage.</li></a>
+                <a href="SM4/free/index.html"><li><b>free</b> – Display free and used memory.</li></a>
+                <a href="SM4/uptime/index.html"><li><b>uptime</b> – Tell how long the system has been running.</li></a>
             </ul>
         </section>
 
         <section>
             <h2>Network Management</h2>
             <ul>
-                <li><b>ping</b> – Test the reachability of a networked host.</li>
-                <li><b>ifconfig</b> – Configure network interfaces.</li>
-                <li><b>ip</b> – Show/manipulate routing, devices, and tunnels.</li>
-                <li><b>wget</b> – Download files from the web.</li>
-                <li><b>curl</b> – Transfer data from or to a server.</li>
+                <a href="NM5/ping/index.html"><li><b>ping</b> – Test the reachability of a networked host.</li></a>
+                <a href="NM5/ifconfig/index.html"><li><b>ifconfig</b> – Configure network interfaces.</li></a>
+                <a href="NM5/ip/index.html"><li><b>ip</b> – Show/manipulate routing, devices, and tunnels.</li></a>
+                <a href="NM5/wget/index.html"><li><b>wget</b> – Download files from the web.</li></a>
+                <a href="NM5/curl/index.html"><li><b>curl</b> – Transfer data from or to a server.</li></a>
             </ul>
         </section>
 
         <section>
             <h2>User and Group Management</h2>
             <ul>
-                <li><b>useradd</b> – Create a new user.</li>
-                <li><b>usermod</b> – Modify a user account.</li>
-                <li><b>passwd</b> – Change user password.</li>
-                <li><b>groups</b> – Show which groups a user is part of.</li>
-                <li><b>su</b> – Switch user.</li>
+                <a href="UGM6/useradd/index.html"><li><b>useradd</b> – Create a new user.</li></a>
+                <a href="UGM6/useradd/index.html"><li><b>usermod</b> – Modify a user account.</li></a>
+                <a href="UGM6/useradd/index.html"><li><b>passwd</b> – Change user password.</li></a>
+                <a href="UGM6/useradd/index.html"><li><b>groups</b> – Show which groups a user is part of.</li></a>
+                <a href="UGM6/useradd/index.html"><li><b>su</b> – Switch user.</li></a>
             </ul>
         </section>
     </div>
@@ -87,5 +101,6 @@
     <footer>
         <p>Linux Commands &copy; 2024</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
